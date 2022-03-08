@@ -20,6 +20,7 @@
                 $page = $_GET['page'];
                 include("$page.php");
             }
+
         ?>
 
         <form action="addfield.php" method="post">
@@ -30,10 +31,6 @@
             <div class="form-group">
                 <label for="reason">Reason</label>
                 <input name="reason" type="text" class="form-control" placeholder="Enter reason">
-            </div>
-            <div class="form-group">
-                <label for="time_out">Time out</label>
-                <input name="time_out" type="text" class="form-control" placeholder="Enter time out">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -13,25 +13,36 @@
             include("dbconnect.php");
 
 
-            $search_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
-            $search_qry = mysqli_query($dbconnect, $search_sql);
-            $search_aa = mysqli_fetch_assoc($search_qry);  
-
-
-
-            // Assigns information from form and details table
+            // Declare variable using ID from form
             $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
-            $first_name = $search_aa['first_name'];
-            $last_name = $search_aa['last_name'];
-            $reason = mysqli_real_escape_string($dbconnect, $_POST['reason']);
-            $time_out = mysqli_real_escape_string($dbconnect, $_POST['time_out']);
 
 
-            // Inserts data into log table
-            $insert_sql = 
-                        "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out) 
-                        VALUES ('$student_ID','$first_name','$last_name','$reason','$time_out')";
-            $insert_qry = mysqli_query($dbconnect, $insert_sql);
+            // Select all information dependiong on ID
+            $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
+            $student_qry = mysqli_query($dbconnect, $student_sql);
+            $student_aa = mysqli_fetch_assoc($student_qry);  
+
+            // Confirm if sudent has/has not signed out
+            $search_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID";
+            $search_qry = mysqli_query($dbconnect,$search_sql);
+
+
+
+
+            // Check if student has not signed out
+            if (mysqli_num_rows($search_qry) == 0) {
+
+
+                // Declare variables using form * student_details table
+                $first_name = $student_aa['first_name'];
+                $last_name = $student_aa['last_name'];
+                $reason = mysqli_real_escape_string($dbconnect, $_POST['reason']);
+
+
+
+                // Inserts data into log table
+                $sign_out_sql = "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()))";
+                $sign_out_qry = mysqli_query($dbconnect, $sign_out_sql);
         ?>
 
         <div class="container-fluid">
@@ -41,6 +52,17 @@
                 </div>
             </div>
         </div>
+
+        <?php
+            } else {
+                $sign_in_sql = "UPDATE student_log SET time_in = (NOW()) WHERE student_ID = $student_ID";
+                $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
+
+                echo "You have signed in";
+
+
+            }
+        ?>
     </body>
 </html>
 
