@@ -27,14 +27,21 @@
             $search_qry = mysqli_query($dbconnect,$search_sql);
             $search_aa = mysqli_fetch_assoc($search_qry);  
 
+
             if (mysqli_num_rows($search_qry) != 0 ) {
                 $student_status = $search_aa['in_school'];
+
+                var_dump($search_aa);
+                ?> <br> <?php
+                echo $search_aa['student_ID'];
+                ?> <br> <?php
+                echo $student_status;
             }
 
             // if (mysqli_num_rows($search_qry) == 0 ) {
 
             // Check if student has not signed out
-            if ((mysqli_num_rows($search_qry) == 0 ) or ($student_status == 0)) {
+            if ((mysqli_num_rows($search_qry) == 0) or ($student_status == 1)) {
 
                 // Declare variables using form * student_details table
                 $first_name = $student_aa['first_name'];
@@ -44,7 +51,7 @@
 
 
                 // Inserts data into log table
-                $sign_out_sql = "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out') VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()) ";
+                $sign_out_sql = "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out, in_school) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()), 2)";
                 $sign_out_qry = mysqli_query($dbconnect, $sign_out_sql);
         ?>
 
@@ -52,16 +59,19 @@
             <div class="row">
                 <div class="col">
                     <p class="display-2">You have signed out</p>
+                    <a href="index.php">Click here to go back</a>
                 </div>
             </div>
         </div>
 
         <?php
             } else {
-                $sign_in_sql = "UPDATE student_log SET time_in = (NOW()) WHERE student_ID = $student_ID";
+                $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID";
                 $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
 
                 echo "You have signed in";
+                ?> <a href="index.php">Click here to go back</a> <?php
+
 
 
             }
