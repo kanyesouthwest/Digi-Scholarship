@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2022 at 06:11 AM
+-- Generation Time: Mar 09, 2022 at 04:43 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -43,6 +43,7 @@ INSERT INTO `student_details` (`student_ID`, `first_name`, `last_name`) VALUES
 (5252, 'timmy', 'jimmy'),
 (5678, 'ryan', 'stewrat'),
 (8293, 'michael', 'owen'),
+(8373, 'Charlie', 'England'),
 (8828, 'djb', 'monkey');
 
 -- --------------------------------------------------------
@@ -58,19 +59,21 @@ CREATE TABLE `student_log` (
   `last_name` varchar(50) NOT NULL,
   `reason` varchar(25) NOT NULL,
   `time_out` varchar(25) NOT NULL,
-  `time_in` varchar(25) NOT NULL
+  `time_in` varchar(25) NOT NULL,
+  `in_school` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `student_log`
 --
 
-INSERT INTO `student_log` (`ID`, `student_ID`, `first_name`, `last_name`, `reason`, `time_out`, `time_in`) VALUES
-(1, 1234, 'digs', 'mcgregor', 'Lunch', '12:08', '12:40'),
-(2, 5678, 'ryan', 'stewrat', 'Appointment', '12:32', ''),
-(3, 5252, 'timmy', 'jimmy', 'Lunch', '5:29', ''),
-(4, 8293, 'michael', 'owen', 'Lunch', '5:41', '2022-03-08 17:57:00'),
-(5, 8828, 'djb', 'monkey', 'Docta', '2022-03-08 18:07:23', '2022-03-08 18:07:43');
+INSERT INTO `student_log` (`ID`, `student_ID`, `first_name`, `last_name`, `reason`, `time_out`, `time_in`, `in_school`) VALUES
+(1, 1234, 'digs', 'mcgregor', 'Lunch', '2022-03-09 16:33:01', '2022-03-09 16:42:02', 1),
+(2, 8828, 'djb', 'monkey', 'lunch', '2022-03-09 16:33:15', '', 2),
+(3, 1234, 'digs', 'mcgregor', 'lunch', '2022-03-09 16:37:08', '2022-03-09 16:42:02', 1),
+(4, 1234, 'digs', 'mcgregor', 'lunch', '2022-03-09 16:37:58', '2022-03-09 16:42:02', 1),
+(5, 1234, 'digs', 'mcgregor', 'lunch', '2022-03-09 16:40:50', '2022-03-09 16:42:02', 1),
+(6, 1234, 'digs', 'mcgregor', 'deez', '2022-03-09 16:41:10', '2022-03-09 16:42:02', 1);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +99,7 @@ ALTER TABLE `student_log`
 -- AUTO_INCREMENT for table `student_log`
 --
 ALTER TABLE `student_log`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
