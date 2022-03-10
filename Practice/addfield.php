@@ -82,7 +82,7 @@
                 $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
                 $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
 
-                $sign_in_transaction_sql = "UPDATE student_transactions SET time_in = (NOW()) WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
+                $sign_in_transaction_sql = "INSERT INTO student_transactions (student_ID, time_in) VALUES ('$student_ID', (NOW()))";
                 $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
 
                 echo "You have signed in";
@@ -93,7 +93,7 @@
 
 
 
-            $test_sql = "DELETE FROM student_log WHERE date < (CURDATE() - INTERVAL 1 DAY)";            
+            // $test_sql = "DELETE FROM student_log WHERE date < (CURDATE() - INTERVAL 1 DAY)";            
         ?>
     </body>
 </html>
