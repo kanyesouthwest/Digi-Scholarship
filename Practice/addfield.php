@@ -27,32 +27,44 @@
             $search_qry = mysqli_query($dbconnect,$search_sql);
             $search_aa = mysqli_fetch_assoc($search_qry);  
 
+            // Selects latest time specific student signed out
+            $order_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
+            $order_qry = mysqli_query($dbconnect,$order_sql);
+            $order_aa = mysqli_fetch_assoc($order_qry);  
 
+
+
+            // If student has signed out before
             if (mysqli_num_rows($search_qry) != 0 ) {
-                $student_status = $search_aa['in_school'];
 
-                var_dump($search_aa);
-                ?> <br> <?php
-                echo $search_aa['student_ID'];
-                ?> <br> <?php
-                echo $student_status;
+                // Varible if they are in school or not
+                // 1 = IN
+                // 2 = OUT
+                $student_status = $order_aa['in_school'];   
+                
+                // Declare variables using form & student_details table
+                $first_name = $student_aa['first_name'];
+                $last_name = $student_aa['last_name'];
+                $reason = mysqli_real_escape_string($dbconnect, $_POST['reason']);
             }
 
-            // if (mysqli_num_rows($search_qry) == 0 ) {
 
-            // Check if student has not signed out
+            // Check if student has never signed out or signing out again
             if ((mysqli_num_rows($search_qry) == 0) or ($student_status == 1)) {
 
-                // Declare variables using form * student_details table
+
                 $first_name = $student_aa['first_name'];
                 $last_name = $student_aa['last_name'];
                 $reason = mysqli_real_escape_string($dbconnect, $_POST['reason']);
 
 
-
                 // Inserts data into log table
                 $sign_out_sql = "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out, in_school) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()), 2)";
                 $sign_out_qry = mysqli_query($dbconnect, $sign_out_sql);
+
+                // Inserts data into transactions table
+                $sign_out_transaction_sql = "INSERT INTO student_transactions (student_ID, first_name, last_name, reason, time_out) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()))";
+                $sign_out_transaction_qry = mysqli_query($dbconnect, $sign_out_transaction_sql);
         ?>
 
         <div class="container-fluid">
@@ -66,18 +78,22 @@
 
         <?php
             } else {
-                $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID";
+                // Update student record with time in
+                $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
                 $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
+
+                $sign_in_transaction_sql = "UPDATE student_transactions SET time_in = (NOW()) WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
+                $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
 
                 echo "You have signed in";
                 ?> <a href="index.php">Click here to go back</a> <?php
-
-
-
             }
+
+
+
+
+
+            $test_sql = "DELETE FROM student_log WHERE date < (CURDATE() - INTERVAL 1 DAY)";            
         ?>
     </body>
 </html>
-
-
-<!-- USE SELECT * FROM student_log WHERE `time_in`= '' FOR CHECKING EMPTY FIELDS -->
