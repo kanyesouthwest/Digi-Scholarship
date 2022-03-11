@@ -67,11 +67,11 @@
                 $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
                 $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
 
-                $group_ID = $group_ID_aa['group_ID'];
-                $group_ID = $group_ID + 1;
+                $group_ID_unique = $group_ID_aa['group_ID'];
+                $group_ID_unique = $group_ID_unique + 1;
 
                 // Inserts data into transactions table
-                $sign_out_transaction_sql = "INSERT INTO student_transactions (student_ID, group_ID, first_name, last_name, reason, time_out) VALUES ('$student_ID','$group_ID','$first_name','$last_name','$reason', (NOW()))";
+                $sign_out_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, first_name, last_name, reason, time_out) VALUES ('$group_ID_unique','$student_ID','$first_name','$last_name','$reason', (NOW()))";
                 $sign_out_transaction_qry = mysqli_query($dbconnect, $sign_out_transaction_sql);
         ?>
 
@@ -90,7 +90,15 @@
                 $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
                 $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
 
-                $sign_in_transaction_sql = "INSERT INTO student_transactions (student_ID, time_in) VALUES ('$student_ID', (NOW()))";
+                $get_group_sql = "SELECT group_ID FROM student_transactions WHERE student_ID = $student_ID ORDER BY group_ID LIMIT 1";
+                $get_group_qry = mysqli_query($dbconnect, $get_group_sql);
+                $get_group_aa = mysqli_fetch_assoc($get_group_qry);  
+
+
+                $non_unique_group_ID = $get_group_aa['group_ID'];
+
+
+                $sign_in_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, time_in) VALUES ('$non_unique_group_ID','$student_ID', (NOW()))";
                 $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
 
                 echo "You have signed in";
