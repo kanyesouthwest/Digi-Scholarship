@@ -62,8 +62,16 @@
                 $sign_out_sql = "INSERT INTO student_log (student_ID, first_name, last_name, reason, time_out, in_school) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()), 2)";
                 $sign_out_qry = mysqli_query($dbconnect, $sign_out_sql);
 
+
+                $group_ID_sql = "SELECT group_ID FROM student_transactions ORDER BY group_ID  DESC limit 1";
+                $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
+                $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
+
+                $group_ID = $group_ID_aa['group_ID'];
+                $group_ID = $group_ID + 1;
+
                 // Inserts data into transactions table
-                $sign_out_transaction_sql = "INSERT INTO student_transactions (student_ID, first_name, last_name, reason, time_out) VALUES ('$student_ID','$first_name','$last_name','$reason', (NOW()))";
+                $sign_out_transaction_sql = "INSERT INTO student_transactions (student_ID, group_ID, first_name, last_name, reason, time_out) VALUES ('$student_ID','$group_ID','$first_name','$last_name','$reason', (NOW()))";
                 $sign_out_transaction_qry = mysqli_query($dbconnect, $sign_out_transaction_sql);
         ?>
 
