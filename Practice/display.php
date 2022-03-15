@@ -24,6 +24,7 @@
                 echo "<p>Reason: " . $student_aa['reason'] . "</p>";
                 echo "<p>Time in: " . $student_aa['time_in'] . "</p>";
                 echo "<p>Time out: " . $student_aa['time_out'] . "</p>";
+                ?> <br> <?php
 
 
             } while ($student_aa = mysqli_fetch_assoc($student_qry));
@@ -40,45 +41,50 @@
             <?php
 
 
+            $group_students_sql = "SELECT student_details.first_name, student_details.last_name, student_transactions.reason, student_transactions.time_out, student_transactions.group_ID,
+                                            GROUP_CONCAT(DISTINCT student_transactions.time_in
+                                                        ORDER BY student_transactions.group_ID DESC SEPARATOR ' ') AS time_in
+                                        FROM student_transactions
+                                        JOIN student_details ON student_transactions.student_ID=student_details.student_ID
+                                        GROUP BY student_transactions.group_ID";
+            $group_students_qry = mysqli_query($dbconnect, $group_students_sql);
+            $group_students_aa = mysqli_fetch_assoc($group_students_qry);
 
-            $select_ID_sql = "SELECT * FROM student_transactions";
-            $select_ID_qry = mysqli_query($dbconnect, $select_ID_sql);
-            $select_ID_aa = mysqli_fetch_assoc($select_ID_qry);  
+            if ($group_students_aa['time_in'] = ' ') {
+                do {
+                    echo "<p>First Name: " . $group_students_aa['first_name'] . "</p>";
+                    echo "<p>Last Name: " . $group_students_aa['last_name'] . "</p>";
+                    echo "<p>Reason: " . $group_students_aa['reason'] . "</p>";
+                    echo "<p>Time out: " . $group_students_aa['time_out'] . "</p>";
+                    echo "<p>Time in: Student did not return</p>";
+                } while ($group_students_aa = mysqli_fetch_assoc($group_students_qry));
 
-            
-            $fetch_group_ID = $select_ID_aa['group_ID'];
-
-
-            $student_old_sql = "SELECT * FROM student_transactions WHERE group_ID = $fetch_group_ID";
-            $student_old_qry = mysqli_query($dbconnect, $student_old_sql);
-            $student_old_aa = mysqli_fetch_assoc($student_old_qry);  
-
-            do {
-                
-                echo "<p>Student ID: " . $student_old_aa['student_ID'] . "</p>";
-                echo "<p>First Name: " . $student_old_aa['first_name'] . "</p>";
-                echo "<p>Last Name: " . $student_old_aa['last_name'] . "</p>";
-                echo "<p>Reason: " . $student_old_aa['reason'] . "</p>";
-                echo "<p>Time out: " . $student_old_aa['time_out'] . "</p>";
-                echo "<p>Time in: " . $student_old_aa['time_in'] . "</p>";
                 ?> <br> <?php
 
-            } while ($student_old_aa = mysqli_fetch_assoc($student_old_qry));
+            } elseif ($group_students_aa['time_in'] != ' ') {
+                    do {
+                        
+                        echo "<p>First Name: " . $group_students_aa['first_name'] . "</p>";
+                        echo "<p>Last Name: " . $group_students_aa['last_name'] . "</p>";
+                        echo "<p>Reason: " . $group_students_aa['reason'] . "</p>";
+                        echo "<p>Time out: " . $group_students_aa['time_out'] . "</p>";
+                        echo "<p>Time in: " . $group_students_aa['time_in'] . "</p>";
+                        ?> <br> <?php
+
+                    } while ($group_students_aa = mysqli_fetch_assoc($group_students_qry));
 
 
-            $group_ID_sql = "SELECT group_ID FROM student_transactions ORDER BY group_ID  DESC LIMIT 1";
-            $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
-            $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
 
-            ?> <br> <?php
+                    $group_ID_sql = "SELECT group_ID FROM student_transactions ORDER BY group_ID  DESC LIMIT 1";
+                    $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
+                    $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
 
-            $group_ID = $group_ID_aa['group_ID'];
-            $group_ID = $group_ID + 1;
+                    ?> <br> <?php
 
-            ?> <br> <?php
-
-            echo $group_ID;
-        ?>
+                    $group_ID = $group_ID_aa['group_ID'];
+                    $group_ID = $group_ID + 1;
+                }
+            ?>
     </body>
 </html>
 
