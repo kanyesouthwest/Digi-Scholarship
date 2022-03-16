@@ -1,5 +1,4 @@
 <?php
-    session_start();
     // includes the database connection
     include("dbconnect.php");
 ?>
@@ -13,31 +12,37 @@
         <link rel="icon" href="images/favicon.png">
     </head>
     <body>
-        <?php
 
-            // checks if the page get array is set to see if it displays students or the weclome
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'];
-                include("$page.php");
-            }
-
-        ?>
-
-        <form action="addfield.php" method="post">
+        <form action="">
             <div class="form-group">
                 <label for="student_ID">Student ID</label>
                 <input name="student_ID" type="number" class="form-control" placeholder="Enter student ID">
             </div>
-            <div class="form-group">
-                <label for="reason">Reason</label>
-                <input name="reason" type="text" class="form-control" placeholder="Enter reason">
-            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <a href="ajax.php">Ajax testing</a>
-        <br>
-        <a href="display.php">Click here to view students signed out</a>
+        <p>Enter student ID</p>
+
+        <form>
+            Student ID: <input type="text" onkeypress="showHint(this.value)">
+            <button type="submit" class="btn btn-primary"><input onclick="showHint(this.value)">Submit</button>
+        </form>
+
+        <script>
+            function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function() {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            xmlhttp.open("GET", "gethint.php?q=" + str);
+            xmlhttp.send();
+                }
+            }
+        </script>
 
 
         <!-- javascript down here -->

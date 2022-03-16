@@ -91,7 +91,7 @@
                 $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
 
 
-                $get_group_sql = "SELECT group_ID FROM student_transactions WHERE student_ID = $student_ID ORDER BY group_ID LIMIT 1";
+                $get_group_sql = "SELECT group_ID FROM student_transactions WHERE student_ID = $student_ID ORDER BY group_ID DESC LIMIT 1";
                 $get_group_qry = mysqli_query($dbconnect, $get_group_sql);
                 $get_group_aa = mysqli_fetch_assoc($get_group_qry);  
 
