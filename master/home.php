@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <title>home</title>
   </head>
-  <body>
+
+  <body style="background-color: rgb(0,65,122);">
     <div class="container-fluid">
 
-      <div class="row d-flex align-items-stretch">
-        <div class="border d-flex align-items-center justify-content-center text-center" style="height: 800px;">
-          <a class="btn btn-outline-primary text-center" href="reson.php" role="button">Link</a>
+      <div class="border d-flex align-items-center justify-content-center" style="height: 1080px; width: 1920px;">
+        <div class="border border-4 border-light rounded-1 d-flex align-items-center justify-content-center " style="height: 200px; width: 600px;">
+          <a class="text-light fs-1" href="index.php?page=reson" role="button">swip card</a>
         </div>
       </div>
-
     </div>
-
 
   </body>
 </html>

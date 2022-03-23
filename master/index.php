@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- Link to custom stylesheet -->
   <link rel="stylesheet" href="custom.css">
-
+  <!-- link to google icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
 </head>

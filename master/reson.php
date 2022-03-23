@@ -5,21 +5,18 @@
     <title>reson</title>
 
   </head>
-  <body class="bg-secondary">
+  <body class="background-color: rgb(0,65,122);">
 
 
 
     <!-- the coteaner to hold every thing -->
     <div class="container-fluid">
-
-    <p>hi htis slkdhgoihoirejlk ljshoiefhosdgjlk j</p>
-
-   <div class="row d-flex align-items-stretch">
+   <div class="row d-flex align-items-stretch" >
 
       <div class="col-9 bg-danger ">
         <div class="row">
           <div class="col-6">
-            <div class="row bg-primary">
+            <div class="row bg-primar">
               <div class="col-3">
                <i class="material-icons md-large">face</i>
               </div>
