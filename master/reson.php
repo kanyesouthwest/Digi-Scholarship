@@ -5,77 +5,91 @@
     <title>reson</title>
 
   </head>
-  <body class="background-color: rgb(0,65,122);">
+  <body style="background-color: rgb(0,65,122);"t>
 
 
 
     <!-- the coteaner to hold every thing -->
     <div class="container-fluid">
-   <div class="row d-flex align-items-stretch" >
+   <div class="row d-flex align-items-stretch px-5" >
+      <div class="col-9 ">
 
-      <div class="col-9 bg-danger ">
-        <div class="row">
-          <div class="col-6">
-            <div class="row bg-primar">
-              <div class="col-3">
+
+        <div class="row" style="height: 360px;" >
+
+          <div class="col-6  border border-5 border-primary" >
+            <div class="row  " style="height: 360px;">
+
+              <div class="col-3  d-flex align-items-center justify-content-center" >
                <i class="material-icons md-large">face</i>
               </div>
-              <div class="col-9 d-flex align-items-center justify-content-center">
+
+              <div class="col-9  d-flex align-items-center justify-content-center">
                 <h2 class="display-1 text-white align-middle">lunch</h1>
               </div>
+
             </div>
           </div>
-          <div class="col-6">
-            <div class="row bg-primary">
-              <div class="col-3">
-              <i class="material-icons md-large">face</i>
+
+          <div class="col-6 bg-warning border border-5 ">
+            <div class="row bg-primary " style="height: 360px;">
+
+              <div class="col-3 bg-success d-flex align-items-center justify-content-center">
+               <i class="material-icons md-large">face</i>
               </div>
-              <div class="col-9 d-flex align-items-center justify-content-right">
-                <h2 class="display-1 text-white ">dentist</h1>
+
+              <div class="col-9 bg-dark d-flex align-items-center justify-content-center">
+                <h2 class="display-1 text-white align-middle">lunch</h1>
               </div>
+
             </div>
           </div>
+
           </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="row bg-primary">
-                <div class="col-3">
-                  <i class="material-icons md-large">face</i>
+
+
+          <div class="row bg-light gx-5 gy-5" style="height: 360px;" >
+            <div class="col-6 bg-warning border border-5 ">
+              <div class="row bg-primary ">
+                <div class="col-3 bg-success d-flex align-items-center justify-content-center">
+                 <i class="material-icons md-large">face</i>
                 </div>
-                <div class="col-9">
-                  <h2 class="display-1 text-white">sick</h1>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="row bg-primary">
-                <div class="col-3">
-                  <i class="material-icons md-large">face</i>
-                </div>
-                <div class="col-9 ">
-                  <h2 class="display-1 text-white">something</h1>
+                <div class="col-9 bg-dark d-flex align-items-center justify-content-center">
+                  <h2 class="display-1 text-white align-middle">lunch</h1>
                 </div>
               </div>
             </div>
+            <div class="col-6 bg-warning border border-5 ">
+              <div class="row bg-primary ">
+                <div class="col-3 bg-success d-flex align-items-center justify-content-center">
+                 <i class="material-icons md-large">face</i>
+                </div>
+                <div class="col-9 bg-dark d-flex align-items-center justify-content-center">
+                  <h2 class="display-1 text-white align-middle">lunch</h1>
+                </div>
+              </div>
             </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="row bg-primary">
-                  <div class="col-3">
-                    <i class="material-icons md-large">face</i>
+            </div>
+
+
+            <div class="row bg-primary gx-5 gy-5" style="height: 360px;" >
+              <div class="col-6 bg-warning border border-5 border- ">
+                <div class="row bg-primary ">
+                  <div class="col-3 bg-success d-flex align-items-center justify-content-center">
+                   <i class="material-icons md-large">face</i>
                   </div>
-                  <div class="col-9">
-                    <h2 class="display-1 text-white">sick</h1>
+                  <div class="col-9 bg-dark d-flex align-items-center justify-content-center">
+                    <h2 class="display-1 text-white align-middle">lunch</h1>
                   </div>
                 </div>
               </div>
-              <div class="col-6">
-                <div class="row bg-primary">
-                  <div class="col-3">
-                    <i class="material-icons md-large">face</i>
+              <div class="col-6 bg-warning border border-5 ">
+                <div class="row bg-primary ">
+                  <div class="col-3 bg-success d-flex align-items-center justify-content-center">
+                   <i class="material-icons md-large">face</i>
                   </div>
-                  <div class="col-9 ">
-                    <h2 class="display-1 text-white">something</h1>
+                  <div class="col-9 bg-dark d-flex align-items-center justify-content-center">
+                    <h2 class="display-1 text-white align-middle">lunch</h1>
                   </div>
                 </div>
               </div>
