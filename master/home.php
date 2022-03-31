@@ -10,7 +10,6 @@
 
       <div class="border d-flex align-items-center justify-content-center" style="height: 1080px; width: 1920px;">
         <div class="border border-4 border-light rounded-1 d-flex align-items-center justify-content-center " style="height: 200px; width: 600px;">
-          <a class="text-light fs-1" href="index.php?page=forms" role="button">swip card</a>
           <a class="text-light fs-1" href="index.php?page=buttonns" role="button">swip card</a>
         </div>
       </div>
