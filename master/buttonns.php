@@ -11,7 +11,7 @@
 
 <form class="" action="complet.php" method="post">
 
-<div class="row">
+<div class="row d-flex align-items-center justify-content-center">
 <div class="col-9">
 
 <div class="row align-items-center" style="height: 1080px;">
@@ -108,24 +108,32 @@
 </div>
  </div>
 
-   <div class="col-3">
-     <div class="col bg-success text-center">
-       <h2 class="display-1 text-white">matthews</h1>
+   <div class="col-3 border border-5 rounded-0 d-flex align-items-cente justify-content-center " style="height: 940px; width: 400px;">
+     <div class="row d-flex align-items-center justify-content-center">
+
+    <div class="row-5">
+     <div class="col-12 text-white text-center ">
+       <p class="text-white text-bold" style="font-size: 300%;">MACGREGOR</p>
+       <p class="text-white text-bold" style="font-size: 300%;">MATTHEWS</p>
+     </div>
+     <div class="col-12">
+       <button type="button"  name="back">back</button>
+     </div>
+    </div>
+
+     <div class="row-2">
      </div>
 
-     <div class="col bg-success text-center">
-       <h2 class="display-1 text-white">not you</h1>
-       <h2 class="display-1 text-white">sing out</h1>
+     <div class="row-5">
+     <div class="col-12 d-flex align-items-cente justify-content-center">
+       <button type="submit" class=" btn btn-success rounded-0" style="height: 300px; width: 300px;">Submit</button>
+     </div>
      </div>
 
-     <div class="col bg-success text-center">
-       <h1 class="display-1 text-white">select</h1>
-     </div>
-
-
-       <button type="submit" class="btn btn-primary">Submit</button>
        </form>
+
        </div>
+     </div>
 
 
 

@@ -72,8 +72,8 @@
             </div>
 
 
-            <div class="row bg-primary gx-5 gy-5" style="height: 360px;" >
-              <div class="col-6 bg-warning border border-5 border- ">
+            <div class="row gx-5 gy-5" style="height: 360px;" >
+              <div class="col-6 bg-warning border border-5">
                 <div class="row bg-primary ">
                   <div class="col-3 bg-success d-flex align-items-center justify-content-center">
                    <i class="material-icons md-large">face</i>
@@ -98,18 +98,18 @@
 
 
 
-      <div class="col-3 bg-primary">
+      <div class="col-3 border border-5 border-light">
 
-        <div class="col bg-success text-center">
+        <div class="col text-center">
           <h2 class="display-1 text-white">matthews</h1>
         </div>
 
-        <div class="col bg-success text-center">
+        <div class="col text-center">
           <h2 class="display-1 text-white">not you</h1>
           <h2 class="display-1 text-white">sing out</h1>
         </div>
 
-        <div class="col bg-success text-center">
+        <div class="col text-center">
           <h1 class="display-1 text-white">select</h1>
         </div>
 
