@@ -23,7 +23,7 @@
 
         ?>
 
-        <form action="addfield.php" method="post">
+        <form action="signin.php" method="post">
             <div class="form-group">
                 <label for="student_ID">Student ID</label>
                 <input name="student_ID" type="number" class="form-control" placeholder="Enter student ID">
@@ -35,7 +35,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <a href="ajax.php">Ajax testing</a>
+        <a href="signoutsystem.php">Ajax testing</a>
         <br>
         <a href="display.php">Click here to view students signed out</a>
 

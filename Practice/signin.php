@@ -9,7 +9,7 @@
     </head>
     <body>
 
-        <?php    
+        <?php
             include("dbconnect.php");
 
 
@@ -109,8 +109,6 @@
 
 
 
-
-            // $test_sql = "DELETE FROM student_log WHERE date < (CURDATE() - INTERVAL 1 DAY)";            
         ?>
     </body>
 </html>
