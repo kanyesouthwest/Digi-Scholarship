@@ -11,7 +11,7 @@
 
 <form class="" action="complet.php" method="post">
 
-<div class="row d-flex align-items-center justify-content-center">
+<div class="row d-flex align-items-center justify-content-center" style="height: 1080px; width: 1680px;">
 <div class="col-9">
 
 <div class="row align-items-center" style="height: 1080px;">
@@ -91,7 +91,7 @@
          </div>
      </label>
 
-     <input class="btn-check " type="radio" name="singoutChoice" value="lunch" id="card6" checked>
+     <input class="btn-check" type="radio" name="singoutChoice" value="lunch" id="card6" checked>
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card6" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -111,23 +111,38 @@
    <div class="col-3 border border-5 rounded-0 d-flex align-items-cente justify-content-center " style="height: 940px; width: 400px;">
      <div class="row d-flex align-items-center justify-content-center">
 
-    <div class="row-5">
+    <div class="row-5 " >
      <div class="col-12 text-white text-center ">
        <p class="text-white text-bold" style="font-size: 300%;">MACGREGOR</p>
        <p class="text-white text-bold" style="font-size: 300%;">MATTHEWS</p>
      </div>
-     <div class="col-12">
-       <button type="button"  name="back">back</button>
-     </div>
     </div>
 
-     <div class="row-2">
+     <div class="row-2 d-flex align-items-cente justify-content-center">
+       <a class="btn btn-outline-light border border-5 rounded-0 text-bold" href="index.php?page=home" role="button" id="back">back</a>
+       <label for="back"></label>
      </div>
+
 
      <div class="row-5">
      <div class="col-12 d-flex align-items-cente justify-content-center">
-       <button type="submit" class=" btn btn-success rounded-0" style="height: 300px; width: 300px;">Submit</button>
-     </div>
+
+
+        <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap border border-5 border-success rounded-0 text-bold " type="submit" class="btn" id="submit" >
+
+          <div class="row row-cols-2">
+
+              <div class="col-12 " >
+                <i class="material-icons md-large ">done</i>
+              </div>
+              <div class="col-12 ">
+                <span style="font-size: 300%;">SUBMIT</span>
+              </div>
+
+            </div>
+
+        </button>
+
      </div>
 
        </form>
