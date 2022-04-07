@@ -15,12 +15,20 @@
 
             // Declare variable using ID from form
             $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
-            
 
-            // Select all information dependiong on ID
+            // Select all information depnding on ID
             $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
             $student_qry = mysqli_query($dbconnect, $student_sql);
             $student_aa = mysqli_fetch_assoc($student_qry);  
+
+            if (mysqli_num_rows($student_qry) == 0 ) {
+                echo "Student is not in the database";
+                echo "<br>"; 
+                echo "You will be redirected in 3 seconds";
+                echo "<br>";
+                echo "$student_ID";
+                header('Refresh:3 ; URL=index.php');
+            } else {
 
             // Confirm if sudent has/has not signed out
             $search_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID";
@@ -31,8 +39,6 @@
             $order_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
             $order_qry = mysqli_query($dbconnect,$order_sql);
             $order_aa = mysqli_fetch_assoc($order_qry);  
-
-
 
             // If student has signed out before
             if (mysqli_num_rows($search_qry) != 0 ) {
@@ -105,7 +111,7 @@
                 echo "You have signed in";
                 ?> <a href="index.php">Click here to go back</a> <?php
             }
-
+        }
 
 
 
