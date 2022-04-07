@@ -93,8 +93,9 @@
             <br>
             <br>
 
-            <a href="export.php">Click me to export the cool students that are bunking to a csv</a>
-
+            <a href="export_daily.php">Export list of records to CSV</a>
+            <br>
+            <a href="export_old.php">Export list of historical records to CSV </a>
 
             <p>Previously signed out daily students</p>
             <?php
