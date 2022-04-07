@@ -10,10 +10,15 @@
 
       <div class="border d-flex align-items-center justify-content-center" style="height: 1080px; width: 1920px;">
         <div class="border border-4 border-light rounded-1 d-flex align-items-center justify-content-center " style="height: 200px; width: 600px;">
-          <a class="text-light fs-1" href="index.php?page=buttonns" role="button">swip card</a>
+          <p class="text-light fs-1" href="index.php?page=buttonns" role="button">Swipe card</p>
         </div>
       </div>
-
+      <form action="index.php?page=reason" method="post">
+            <div class="form-group">
+                <label for="student_ID">Student ID</label>
+                <input name="student_ID" type="number" class="form-control" placeholder="Enter student ID">
+            </div>
+        </form>
     </div>
 
   </body>

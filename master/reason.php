@@ -7,32 +7,53 @@
   <body style="background-color: rgb(0,65,122);">
 
 
+  <?php
+
+            // Declare variable using ID from form
+            $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
+
+            // Select all information depnding on ID
+            $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
+            $student_qry = mysqli_query($dbconnect, $student_sql);
+            $student_aa = mysqli_fetch_assoc($student_qry);  
+
+            if (mysqli_num_rows($student_qry) == 0 ) {
+                echo "Student is not in the database";
+                echo "<br>"; 
+                echo "You will be redirected in 3 seconds";
+                echo "<br>";
+                echo "$student_ID";
+                header('Refresh:3 ; URL=index.php?page=home');
+            } else {
+
+  ?>
+
 <div class=" container-fluid">
 
-<form class="" action="complet.php" method="post">
+<form class="" action="index.php?page=complete" method="post">
 
 <div class="row d-flex align-items-center justify-content-center" style="height: 1080px; width: 1680px;">
 <div class="col-9">
 
 <div class="row align-items-center" style="height: 1080px;">
 
-   <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
+  <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
 
-     <input class="btn-check form-check" type="radio" name="singoutChoice" value="custom" id="card1">
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card1" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+    <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1">
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card1" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
-           <div class="col-12 " >
-             <i class="material-icons md-large ">edit</i>
-           </div>
-           <div class="col-12 ">
-             <span style="font-size: 300%;">CUSTOM</span>
-           </div>
+        <div class="col-12 " >
+          <i class="material-icons md-large ">edit</i>
+        </div>
+        <div class="col-12 ">
+          <span style="font-size: 300%;">CUSTOM</span>
+        </div>
 
          </div>
      </label>
 
-     <input class="btn-check " type="radio" name="singoutChoice" value="sports" id="card2">
+     <input class="btn-check " type="radio" name="reason" value="sports" id="card2">
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card2" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -47,7 +68,7 @@
 
      </label>
 
-     <input class="btn-check " type="radio" name="singoutChoice" value="sick" id="card3">
+     <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card3" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -63,7 +84,7 @@
    </div>
 
    <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
-     <input class="btn-check " type="radio" name="singoutChoice" value="dolores" id="card4">
+     <input class="btn-check " type="radio" name="reason" value="dolores" id="card4">
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card4" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -77,7 +98,7 @@
          </div>
      </label>
 
-     <input class="btn-check " type="radio" name="singoutChoice" value="school" id="card5">
+     <input class="btn-check " type="radio" name="reason" value="school" id="card5">
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card5" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -91,7 +112,7 @@
          </div>
      </label>
 
-     <input class="btn-check" type="radio" name="singoutChoice" value="lunch" id="card6" checked>
+     <input class="btn-check" type="radio" name="reason" value="lunch" id="card6" checked>
      <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card6" style="height: 400px; width: 400px;" >
        <div class="row row-cols-2">
 
@@ -127,17 +148,26 @@
             <p class="text-white text-bold" style="font-size: 300%;">BACK</p>
           </div>
 
-         </div>
+        </div>
 
-       </a>
+      </a>
 
-     </div>
-
-
-     <div class="row-5">
-     <div class="col-12 d-flex align-items-cente justify-content-center">
+    </div>
 
 
+    <div class="row-5">
+    <div class="col-12 d-flex align-items-cente justify-content-center">
+
+
+
+        <!-- <input type="checkbox" class="form-check-input" name="studentID" value= php {$studentID} ?>"id="studentID">
+        <label type="form-check-label" for="studentID"> ?php echo "$student_ID";?> -->
+
+        <textarea id="studentID" name="studentID" rows="1" cols="50">
+          <?php echo $student_ID ?>
+        </textarea>
+
+        
         <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap  rounded-0 text-bold border border-light border-5 padding-0 gx-0" type="submit" class="btn" id="submit" >
 
           <div class="row row-cols-2">
@@ -152,20 +182,18 @@
             </div>
 
         </button>
+    </div>
+  </form>
 
-     </div>
-
-       </form>
-
-       </div>
-     </div>
+      </div>
+    </div>
 
 
 
- </div>
+</div>
 </div>
 
-
+<?php }?>
 
   </body>
 </html>
