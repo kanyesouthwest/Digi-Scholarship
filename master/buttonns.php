@@ -108,8 +108,8 @@
 </div>
  </div>
 
-   <div class="col-3 border border-5 rounded-0 d-flex align-items-cente justify-content-center " style="height: 940px; width: 400px;">
-     <div class="row d-flex align-items-center justify-content-center">
+   <div class="col-3 border border-5 rounded-0 d-flex align-items-cente justify-content-center container-fluid" style="height: 940px; width: 400px;">
+     <div class="row d-flex align-items-center justify-content-center container-fluid">
 
     <div class="row-5 " >
      <div class="col-12 text-white text-center ">
@@ -119,8 +119,18 @@
     </div>
 
      <div class="row-2 d-flex align-items-cente justify-content-center">
-       <a class="btn btn-outline-light border border-5 rounded-0 text-bold" href="index.php?page=home" role="button" id="back">back</a>
-       <label for="back"></label>
+       <a class="btn btn-danger rounded-0 text-bold border border-light border-5 " href="index.php?page=home" role="button">
+
+         <div class="row">
+
+           <div class="col-4">
+            <p class="text-white text-bold" style="font-size: 300%;">BACK</p>
+          </div>
+
+         </div>
+
+       </a>
+
      </div>
 
 
@@ -128,7 +138,7 @@
      <div class="col-12 d-flex align-items-cente justify-content-center">
 
 
-        <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap border border-5 border-success rounded-0 text-bold " type="submit" class="btn" id="submit" >
+        <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap  rounded-0 text-bold border border-light border-5 padding-0 gx-0" type="submit" class="btn" id="submit" >
 
           <div class="row row-cols-2">
 
