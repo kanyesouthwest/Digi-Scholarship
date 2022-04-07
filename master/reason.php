@@ -134,8 +134,11 @@
 
     <div class="row-5 " >
      <div class="col-12 text-white text-center ">
-       <p class="text-white text-bold" style="font-size: 300%;">MACGREGOR</p>
-       <p class="text-white text-bold" style="font-size: 300%;">MATTHEWS</p>
+        <p class="text-white text-bold" style="font-size: 300%;"> <?php echo $student_aa['first_name']; ?> </p>
+        <p class="text-white text-bold" style="font-size: 300%;"> <?php echo $student_aa['last_name']; ?> </p>
+
+       <!-- <p class="text-white text-bold" style="font-size: 300%;">MACGREGOR</p>
+       <p class="text-white text-bold" style="font-size: 300%;">MATTHEWS</p> -->
      </div>
     </div>
 
