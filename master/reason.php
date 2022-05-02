@@ -49,72 +49,70 @@
         <div class="col-12 ">
           <span style="font-size: 300%;">CUSTOM</span>
         </div>
+      </div>
+    </label>
 
-         </div>
-     </label>
+    <input class="btn-check " type="radio" name="reason" value="sports" id="card2">
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card2" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
-     <input class="btn-check " type="radio" name="reason" value="sports" id="card2">
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card2" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+          <div class="col-12 " >
+            <i class="material-icons md-large ">sports_basketball</i>
+          </div>
+          <div class="col-12 ">
+            <span style="font-size: 300%;">SPORTS</span>
+          </div>
 
-           <div class="col-12 " >
-             <i class="material-icons md-large ">sports_basketball</i>
-           </div>
-           <div class="col-12 ">
-             <span style="font-size: 300%;">SPORTS</span>
-           </div>
+      </div>
+    </label>
 
-         </div>
+    <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card3" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
-     </label>
+        <div class="col-12 " >
+          <i class="material-icons md-large ">sick</i>
+        </div>
+        <div class="col-12 ">
+          <span style="font-size: 300%;">SICK</span>
+        </div>
 
-     <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card3" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+      </div>
+    </label>
+  </div>
 
-           <div class="col-12 " >
-             <i class="material-icons md-large ">sick</i>
-           </div>
-           <div class="col-12 ">
-             <span style="font-size: 300%;">SICK</span>
-           </div>
+  <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
+    <input class="btn-check " type="radio" name="reason" value="dolores" id="card4">
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card4" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
-         </div>
-     </label>
-   </div>
+        <div class="col-12 " >
+          <i class="material-icons md-large ">medication</i>
+        </div>
+        <div class="col-12 ">
+          <span style="font-size: 300%;">DOCTORS</span>
+        </div>
 
-   <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
-     <input class="btn-check " type="radio" name="reason" value="dolores" id="card4">
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card4" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+      </div>
+    </label>
 
-           <div class="col-12 " >
-             <i class="material-icons md-large ">medication</i>
-           </div>
-           <div class="col-12 ">
-             <span style="font-size: 300%;">DOCTORS</span>
-           </div>
+    <input class="btn-check " type="radio" name="reason" value="school" id="card5">
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card5" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
-         </div>
-     </label>
+        <div class="col-12 " >
+          <i class="material-icons md-large ">directions_bus_filled</i>
+        </div>
+        <div class="col-12 ">
+          <span style="font-size: 300%;">SCHOOL TRIP</span>
+        </div>
 
-     <input class="btn-check " type="radio" name="reason" value="school" id="card5">
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card5" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+        </div>
+    </label>
 
-           <div class="col-12 " >
-             <i class="material-icons md-large ">directions_bus_filled</i>
-           </div>
-           <div class="col-12 ">
-             <span style="font-size: 300%;">SCHOOL TRIP</span>
-           </div>
-
-         </div>
-     </label>
-
-     <input class="btn-check" type="radio" name="reason" value="lunch" id="card6" checked>
-     <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card6" style="height: 400px; width: 400px;" >
-       <div class="row row-cols-2">
+    <input class="btn-check" type="radio" name="reason" value="lunch" id="card6" checked>
+    <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card6" style="height: 400px; width: 400px;" >
+      <div class="row row-cols-2">
 
            <div class="col-12 " >
              <i class="material-icons md-large ">restaurant</i>
