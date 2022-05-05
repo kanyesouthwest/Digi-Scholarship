@@ -45,7 +45,7 @@
       $student_status = $order_aa['in_school'];   
     }
 
-    if ((mysqli_num_rows($search_qry) != 0) or ($student_status == 2)) {
+    if ($student_status == 2) {
 
       // Update student record with time in 
       $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
