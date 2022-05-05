@@ -109,31 +109,16 @@
             $group_students_qry = mysqli_query($dbconnect, $group_students_sql);
             $group_students_aa = mysqli_fetch_assoc($group_students_qry);
 
-            // do {
-            //     echo "<p>First Name: " . $group_students_aa['first_name'] . "</p>";
-            //     echo "<p>Last Name: " . $group_students_aa['last_name'] . "</p>";
-            //     echo "<p>Reason: " . $group_students_aa['reason'] . "</p>";
-            //     echo "<p>Time out: " . $group_students_aa['time_out'] . "</p>";
-            //     if ($group_students_aa['time_in']!="") {
-            //         echo "<p>Time in: " . $group_students_aa['time_in'] . "</p>";
-            //     } else {
-            //         echo "<p>Time in: Student did not return</p>";
-            //     }
-            //     ?> <br> <?php
-                
-            //     } while ($group_students_aa = mysqli_fetch_assoc($group_students_qry));
-                ?> 
-                <br> 
-                <?php
+            ?> 
+            <br> 
+            <?php
+                $group_ID_sql = "SELECT group_ID FROM student_transactions ORDER BY group_ID  DESC LIMIT 1";
+                $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
+                $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
 
-                    $group_ID_sql = "SELECT group_ID FROM student_transactions ORDER BY group_ID  DESC LIMIT 1";
-                    $group_ID_qry = mysqli_query($dbconnect, $group_ID_sql);
-                    $group_ID_aa = mysqli_fetch_assoc($group_ID_qry);  
-
-                    $group_ID = $group_ID_aa['group_ID'];
-                    $group_ID = $group_ID + 1;
-
-                    ?>
+                $group_ID = $group_ID_aa['group_ID'];
+                $group_ID = $group_ID + 1;
+            ?>
 
     <div class="container">
         <div class="col-md-12">

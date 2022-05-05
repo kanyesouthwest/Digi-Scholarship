@@ -5,7 +5,7 @@ include ("dbconnect.php");
 
 // Fetch records from database 
 $export_query = $dbconnect->query("SELECT student_details.student_ID, student_details.first_name, student_details.last_name, student_transactions.reason, student_transactions.time_out, student_transactions.group_ID,
-                                    GROUP_CONCAT(DISTINCT student_transctions.time_in
+                                    GROUP_CONCAT(DISTINCT student_transactions.time_in
                                         ORDER BY student_transactions.group_ID DESC SEPARATOR ' ') AS time_in
                                     FROM student_transactions
                                     JOIN student_details ON student_transactions.student_ID=student_details.student_ID
@@ -19,12 +19,12 @@ if($export_query->num_rows > 0) {
     $f = fopen('php://memory', 'w'); 
 
     // Set column headers 
-    $fields = array('ID', 'Student ID', 'First name', 'Last name', 'Reason', 'Time out', 'Time in'); 
+    $fields = array('Student ID', 'First name', 'Last name', 'Reason', 'Time out', 'Time in'); 
     fputcsv($f, $fields, $delimiter); 
 
     // Output each row of the data, format line as csv and write to file pointer 
     while($row = $export_query->fetch_assoc()){ 
-        $lineData = array($row['ID'], $row['student_ID'], $row['first_name'], $row['last_name'], $row['reason'], $row['time_out'], $row['time_in']); 
+        $lineData = array($row['student_ID'], $row['first_name'], $row['last_name'], $row['reason'], $row['time_out'], $row['time_in']); 
         fputcsv($f, $lineData, $delimiter); 
     } 
 
@@ -37,7 +37,12 @@ if($export_query->num_rows > 0) {
 
     //output all remaining data on a file pointer 
     fpassthru($f); 
-} 
+
+    // If no students found in database
+    } else {
+        echo "No records in database";
+        ?> <a href="secure.php">Go Back</a><?php
+    }
 exit; 
 
 ?>

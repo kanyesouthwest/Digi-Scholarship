@@ -4,7 +4,7 @@
 include ("dbconnect.php");
 
 // Fetch records from database 
-$export_query = $dbconnect->query("SELECT *from student_log WHERE DATE(time_out)=current_date ORDER BY time_out ASC"); 
+$export_query = $dbconnect->query("SELECT * FROM student_log WHERE DATE(time_out)=current_date ORDER BY time_out ASC"); 
 
 if($export_query->num_rows > 0) { 
     $delimiter = ","; 
@@ -14,12 +14,12 @@ if($export_query->num_rows > 0) {
     $f = fopen('php://memory', 'w'); 
 
     // Set column headers 
-    $fields = array('ID', 'Student ID', 'First name', 'Last name', 'Reason', 'Time out', 'Time in'); 
+    $fields = array('Student ID', 'First name', 'Last name', 'Reason', 'Time out', 'Time in'); 
     fputcsv($f, $fields, $delimiter); 
 
     // Output each row of the data, format line as csv and write to file pointer 
     while($row = $export_query->fetch_assoc()){ 
-        $lineData = array($row['ID'], $row['student_ID'], $row['first_name'], $row['last_name'], $row['reason'], $row['time_out'], $row['time_in']); 
+        $lineData = array($row['student_ID'], $row['first_name'], $row['last_name'], $row['reason'], $row['time_out'], $row['time_in']); 
         fputcsv($f, $lineData, $delimiter); 
     } 
 
@@ -32,7 +32,14 @@ if($export_query->num_rows > 0) {
 
     //output all remaining data on a file pointer 
     fpassthru($f); 
-} 
+    
+    // If no students found in database
+    } else {
+        echo "No records in database";
+        ?> <a href="secure.php">Go Back</a><?php
+
+
+}
 exit; 
 
 ?>
