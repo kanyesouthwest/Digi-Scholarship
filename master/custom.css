@@ -1,15 +1,21 @@
 
 
+.test {
 
+  background: rgb(255, 0, 0);
+
+}
+
+.p  {
+
+  background-color: rgba(255, 0, 0, 0.5);
+}
 
 .material-icons.md-large { font-size: 200px; }
 
 
-/* input[type=number]:: -webkit-inner-spin-button */
-input[type=number]:: -webkit-inner-spin-button {
-
-  -webkit-apperance: none;
-
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-
 }

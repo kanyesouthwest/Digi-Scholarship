@@ -15,21 +15,21 @@
       // Select all information depnding on ID
       $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
       $student_qry = mysqli_query($dbconnect, $student_sql);
-      $student_aa = mysqli_fetch_assoc($student_qry); 
+      $student_aa = mysqli_fetch_assoc($student_qry);
 
       // Confirm if sudent has/has not signed out
       $search_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID";
       $search_qry = mysqli_query($dbconnect,$search_sql);
-      $search_aa = mysqli_fetch_assoc($search_qry);  
+      $search_aa = mysqli_fetch_assoc($search_qry);
 
       // Selects latest time specific student signed out
       $order_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
       $order_qry = mysqli_query($dbconnect,$order_sql);
-      $order_aa = mysqli_fetch_assoc($order_qry);  
+      $order_aa = mysqli_fetch_assoc($order_qry);
 
       if (mysqli_num_rows($student_qry) == 0 ) {
         echo "Student is not in the database";
-        echo "<br>"; 
+        echo "<br>";
         echo "You will be redirected in 3 seconds";
         echo "<br>";
         echo "$student_ID";
@@ -42,18 +42,18 @@
         // Varible if they are in school or not
         // 1 = IN
         // 2 = OUT
-        $student_status = $order_aa['in_school'];   
+        $student_status = $order_aa['in_school'];
       }
 
         if (isset($student_status) && $student_status == 2) {
 
-        // Update student record with time in 
+        // Update student record with time in
         $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
         $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
 
         $get_group_sql = "SELECT group_ID FROM student_transactions WHERE student_ID = $student_ID ORDER BY group_ID DESC LIMIT 1";
         $get_group_qry = mysqli_query($dbconnect, $get_group_sql);
-        $get_group_aa = mysqli_fetch_assoc($get_group_qry);  
+        $get_group_aa = mysqli_fetch_assoc($get_group_qry);
 
         $non_unique_group_ID = $get_group_aa['group_ID'];
 
@@ -196,7 +196,7 @@
           </div>
       </form>
     </div>
-    <?php } 
+    <?php }
     } ?>
   </body>
 </html>
