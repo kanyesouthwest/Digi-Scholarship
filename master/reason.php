@@ -175,6 +175,11 @@
                   <!-- <input type="checkbox" class="form-check-input" name="studentID" value= php {$studentID} ?>"id="studentID">
                   <label type="form-check-label" for="studentID"> ?php echo "$student_ID";?> -->
 
+                  <!-- Display student ID number on select reason -->
+                  <textarea id="studentID" name="studentID" rows="1" cols="50">
+                    <?php echo $student_ID ?>
+                  </textarea>
+
                   <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap  rounded-0 text-bold border border-light border-5 padding-0 gx-0" type="submit" class="btn" id="submit" >
                     <div class="row row-cols-2">
                       <div class="col-12 " >
