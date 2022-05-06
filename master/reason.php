@@ -8,9 +8,12 @@
 
 
     <?php
-
+    session_start();
       // Declare variable using ID from form
-      $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
+      // $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
+
+      $_SESSION['student_ID'] = $_POST['student_ID'];
+      $student_ID = $_POST['student_ID'];
 
       // Select all information depnding on ID
       $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
@@ -65,7 +68,7 @@
     ?>
 
     <div class=" container-fluid">
-      <form class="" action="index.php?page=complete&student_ID=<?php echo $_POST['student_ID']; ?>" method="post">
+      <form class="" action="index.php?page=complete" method="post">
         <div class="row d-flex align-items-center justify-content-center" style="height: 1080px; width: 1680px;">
           <div class="col-9">
             <div class="row align-items-center" style="height: 1080px;">

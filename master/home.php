@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(isset($_SESSION['student_ID'])) {
+    unset($_SESSION['student_ID']);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

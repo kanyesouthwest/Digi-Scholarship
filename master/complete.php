@@ -6,11 +6,13 @@
   </head>
   <body>
     <?php
+    session_start();
+    
       if(!isset($_POST['reason'])) {
           header("Location: home.php");
 
       } else {
-        $student_ID = $_GET["student_ID"];
+        $student_ID = $_SESSION["student_ID"];
 
         // Select all information depnding on ID
         $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
