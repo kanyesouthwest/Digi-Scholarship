@@ -10,7 +10,7 @@
           header("Location: home.php");
 
       } else {
-        $student_ID = $_POST["studentID"];
+        $student_ID = $_GET["student_ID"];
 
         // Select all information depnding on ID
         $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
