@@ -8,10 +8,14 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <a href="index.php">Click here to go back</a>
-
-
         <?php
+            session_start();
+
+            if(!isset($_SESSION['admin'])) {
+                // Not logged in, redirect back to index page
+                header("Location: index.php?page=login");
+            }
+
             include("dbconnect.php");
             // Select all information dependiong on ID
             $student_sql = "SELECT * FROM student_log";
@@ -19,6 +23,14 @@
             $student_aa = mysqli_fetch_assoc($student_qry);  
             ?> 
 
+
+        <?
+            if (date(('h') == 09)   ) {
+                echo "hello world";
+            }
+
+
+        ?>
 
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -96,8 +108,11 @@
             <a href="export_daily.php">Export list of records to CSV</a>
             <br>
             <a href="export_old.php">Export list of historical records to CSV </a>
-
+            <br>
+            <a href="logout.php">Click here to logout</a>
             <p>Previously signed out daily students</p>
+            
+
             <?php
 
             $group_students_sql = "SELECT student_details.student_ID, student_details.first_name, student_details.last_name, student_transactions.reason, student_transactions.time_out, student_transactions.group_ID,
@@ -176,7 +191,6 @@
             </div>
         </div>
     </div>
-
     </body>
 </html>
 

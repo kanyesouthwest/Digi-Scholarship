@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2022 at 05:23 AM
+-- Generation Time: May 11, 2022 at 11:12 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -68,7 +68,9 @@ CREATE TABLE `student_log` (
 --
 
 INSERT INTO `student_log` (`ID`, `student_ID`, `first_name`, `last_name`, `reason`, `time_out`, `time_in`, `in_school`) VALUES
-(1, 1234, 'Digs', 'Mcgregor', 'lunch', '2022-05-05 14:17:52', '2022-05-05 14:18:13', 1);
+(1, 1234, 'Digs', 'Mcgregor', 'sick', '2022-05-10 10:03:01', '2022-05-10 10:03:04', 1),
+(2, 1234, 'Digs', 'Mcgregor', 'lunch', '2022-05-10 11:31:18', '2022-05-10 11:31:20', 1),
+(3, 5678, 'Ryan', 'Stewrat', 'sick', '2022-05-11 09:24:55', '', 2);
 
 -- --------------------------------------------------------
 
@@ -92,11 +94,36 @@ CREATE TABLE `student_transactions` (
 --
 
 INSERT INTO `student_transactions` (`ID`, `group_ID`, `student_ID`, `first_name`, `last_name`, `reason`, `time_out`, `time_in`) VALUES
-(1, 0, 1234, '', '', '', '', '2022-05-05 14:08:13'),
-(2, 0, 1234, '', '', '', '', '2022-05-05 14:08:18'),
-(3, 1, 1234, 'Digs', 'Mcgregor', 'lunch', '2022-05-05 14:17:52', ''),
-(4, 1, 1234, '', '', '', '', '2022-05-05 14:17:55'),
-(5, 1, 1234, '', '', '', '', '2022-05-05 14:18:13');
+(3, 2, 5678, 'ijfieifj', 'Stewrat', 'lunch', '2022-05-06 12:35:55', ''),
+(6, 4, 5678, 'test', 'Stewrat', 'lunch', '2022-05-06 12:36:18', ''),
+(8, 4, 5678, '', '', '', '', '2022-05-06 12:36:44'),
+(9, 5, 1234, 'Digs', 'Mcgregor', 'sports', '2022-05-06 13:29:37', ''),
+(10, 5, 1234, '', '', '', '', '2022-05-06 13:29:43'),
+(13, 7, 1234, 'Digs', 'Mcgregor', 'lunch', '2022-05-06 13:54:14', ''),
+(14, 7, 1234, '', '', '', '', '2022-05-06 13:54:16'),
+(15, 8, 1234, 'Digs', 'Mcgregor', 'sick', '2022-05-10 10:03:01', ''),
+(16, 8, 1234, '', '', '', '', '2022-05-10 10:03:04'),
+(17, 9, 1234, 'Digs', 'Mcgregor', 'lunch', '2022-05-10 11:31:18', ''),
+(18, 9, 1234, '', '', '', '', '2022-05-10 11:31:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `userID` int(2) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userID`, `username`, `password`) VALUES
+(1, 'username', '$2y$10$biuYSVnvvwYOTSChmEVzLey8rocuZ2RRcqKRRuotNV1jRnK/VaVwK');
 
 --
 -- Indexes for dumped tables
@@ -121,6 +148,12 @@ ALTER TABLE `student_transactions`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -134,19 +167,25 @@ ALTER TABLE `student_details`
 -- AUTO_INCREMENT for table `student_log`
 --
 ALTER TABLE `student_log`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `student_transactions`
 --
 ALTER TABLE `student_transactions`
-  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `userID` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 DELIMITER $$
 --
 -- Events
 --
-CREATE DEFINER=`root`@`localhost` EVENT `drop_table` ON SCHEDULE EVERY 24 HOUR STARTS '2022-05-05 13:50:00' ON COMPLETION NOT PRESERVE ENABLE DO TRUNCATE student_log$$
+CREATE DEFINER=`root`@`localhost` EVENT `drop_table` ON SCHEDULE EVERY 1 DAY STARTS '2022-05-05 13:59:00' ON COMPLETION NOT PRESERVE ENABLE DO TRUNCATE student_log$$
 
 DELIMITER ;
 COMMIT;

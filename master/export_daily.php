@@ -36,7 +36,7 @@ if($export_query->num_rows > 0) {
     // If no students found in database
     } else {
         echo "No records in database";
-        ?> <a href="secure.php">Go Back</a><?php
+        ?> <a href="index.php?page=admin">Go Back</a><?php
 
 
 }
