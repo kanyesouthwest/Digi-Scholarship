@@ -23,15 +23,6 @@
             $student_aa = mysqli_fetch_assoc($student_qry);  
             ?> 
 
-
-        <?
-            if (date(('h') == 09)   ) {
-                echo "hello world";
-            }
-
-
-        ?>
-
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -184,7 +175,6 @@
                                     </div>
                                 </td>
                                 <?php } while ($group_students_aa = mysqli_fetch_assoc($group_students_qry)); ?>
-
                             </tbody>
                         </table>
                 </div>
