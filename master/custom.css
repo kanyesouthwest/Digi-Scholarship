@@ -1,6 +1,37 @@
 
 
 
+
+@font-face {
+  src: url(fonts/din/DinPro-Regular.otf);
+  font-family: din;
+}
+
+* {
+  font-family: din;
+}
+
+body {
+
+  height: 100vh;
+
+background-color: rgb(0,65,122);
+
+}
+.container{
+    height: 100%;
+}
+
+.vstack{
+    height: 100vh;
+}
+
+.h1 {
+
+  color: rgb(255, 0, 0);
+
+}
+
 .material-icons.md-large { font-size: 200px; }
 
 
