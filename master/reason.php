@@ -31,12 +31,7 @@
       $order_aa = mysqli_fetch_assoc($order_qry);
 
       if (mysqli_num_rows($student_qry) == 0 ) {
-        echo "Student is not in the database";
-        echo "<br>";
-        echo "You will be redirected in 3 seconds";
-        echo "<br>";
-        echo "$student_ID";
-        header('Refresh:3 ; URL=index.php?page=home');
+        header("Location:index.php?page=no_id");
       } else {
 
       // If student has signed out before
