@@ -18,7 +18,7 @@
 
 
 
-  <h1 role="button">SWIPE CARD</h1>
+  <h1>SWIPE CARD</h1>
 
     <form action="index.php?page=reason" method="post">
         <div class="form-group">
