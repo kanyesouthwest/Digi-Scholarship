@@ -23,7 +23,7 @@
     <form action="index.php?page=reason" method="post">
         <div class="form-group">
               <label for="student_ID"></label>
-              <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success" onblur="this.focus()" style="--bs-bg-opacity: .0;">
+              <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success text-rgb(0,65,122)" onblur="this.focus()" style="--bs-bg-opacity: .0; ">
         </div>
     </form>
 

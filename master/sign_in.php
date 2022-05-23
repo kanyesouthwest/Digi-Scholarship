@@ -7,7 +7,6 @@
 
 </div>
 
-
 <?php
   header('Refresh:3 ; URL=index.php?page=home');
  ?>

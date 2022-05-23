@@ -11,6 +11,16 @@
   font-family: din;
 }
 
+
+.form-control:focus {
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.btn:focus {
+    outline: 0 !important;
+}
+
 body {
 
   height: 100vh;
