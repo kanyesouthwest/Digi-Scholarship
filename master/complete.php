@@ -74,9 +74,9 @@
 
             <div class="container d-flex align-items-center justify-content-center vstack text-light">
 
-                  <h1>you have signed out</h1>
+                  <h1>You have signed out</h1>
 
-                  <p>you will be redorected in 3 secods</p>
+                  <p>You will be redirected in 3 seconds</p>
 
             </div>
 
