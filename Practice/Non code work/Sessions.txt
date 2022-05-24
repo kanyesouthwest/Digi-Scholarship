@@ -1,8 +1,0 @@
-New Table - 
-
-Log field: session ID
-tranasction field: session ID
-
-on student sign out create new session and assign
-
-Look in transactions for ID if not found student sign out else student sign in
