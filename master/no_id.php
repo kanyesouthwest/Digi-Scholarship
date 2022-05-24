@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body style="background-color: rgb(0,65,122);">
 <div class="container d-flex align-items-center justify-content-center vstack text-light" >
 
@@ -13,3 +14,5 @@
 ?>
 
 </body>
+=======
+>>>>>>> parent of 867a687 (fixed some small things)

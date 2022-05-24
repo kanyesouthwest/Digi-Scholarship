@@ -74,7 +74,11 @@
 
             <div class="container d-flex align-items-center justify-content-center vstack text-light">
 
+<<<<<<< HEAD
                   <h1>You have signed out</h1>
+=======
+                  <h1 class="display-1">you have signed out</h1>
+>>>>>>> parent of 867a687 (fixed some small things)
 
                   <p>You will be redirected in 3 seconds</p>
 
