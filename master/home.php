@@ -16,7 +16,7 @@
 
 <div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
 
-
+          
 
           <p class="text-light fs-1" href="index.php?page=buttonns" role="button">Swipe Card</p>
 

@@ -62,134 +62,155 @@
       } else {
     ?>
 
-    <div class=" container-fluid">
-      <form class="" action="index.php?page=complete" method="post">
-        <div class="row d-flex align-items-center justify-content-center" style="height: 1080px; width: 1680px;">
-          <div class="col-9">
-            <div class="row align-items-center" style="height: 1080px;">
-              <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
+    <!-- the contaner to hold the page -->
+    <div class="container-fluid d-flex align-items-cente justify-content-center vstack" style="text: rgb(0, 49, 85);">
 
+      <!-- the begining of the form -->
+      <form class="" action="index.php?page=complete "  method="post">
+
+
+        <!-- row for top 3 cards -->
+        <div class="row p-2 d-flex align-items-cente justify-content-center">
+
+
+          <!-- card1 custom as well -->
+          <div class="col-auto">
+
+                <!-- input with the label -->
                 <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1">
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card1" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
-                    <div class="col-12 " >
+                <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold rounded-start rounded-top bg-light" for="card1" style="height:300px; width: 300px;">
+
+                    <!-- icon -->
+                    <div class="col-12" >
                       <i class="material-icons md-large ">edit</i>
                     </div>
-                    <div class="col-12 ">
+                    <!-- text -->
+                    <div class="col-12">
                       <span style="font-size: 300%;">CUSTOM</span>
                     </div>
-                  </div>
                 </label>
 
+          </div>
+
+
+          <!-- card2 -->
+          <div class="col-auto">
+
+                <!-- input with the label -->
                 <input class="btn-check " type="radio" name="reason" value="sports" id="card2">
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card2" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
-                      <div class="col-12 " >
+                <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold rounded-start rounded-top rounded-5" for="card2" style="height:300px; width: 300px">
+
+                      <!-- icon -->
+                      <div class="col-12">
                         <i class="material-icons md-large ">sports_basketball</i>
                       </div>
-                      <div class="col-12 ">
+
+                      <!-- text -->
+                      <div class="col-12">
                         <span style="font-size: 300%;">SPORTS</span>
                       </div>
-                  </div>
+
                 </label>
 
+          </div>
+
+          <!-- card3 -->
+          <div class="col-auto">
+
+                <!-- input with the label -->
                 <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card3" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
+                <label class="btn btn-outline-info btn-outline-light text-nowrap border rounded-0 text-bold" for="card3" style="height:300px; width: 300px" >
+                  <div class="row-4">
+
+                    <!-- icon -->
                     <div class="col-12 " >
                       <i class="material-icons md-large ">sick</i>
                     </div>
+
+                    <!-- text -->
                     <div class="col-12 ">
                       <span style="font-size: 300%;">SICK</span>
                     </div>
                   </div>
                 </label>
-              </div>
 
-              <div class="col d-flex gap-5 d-flex align-items-center justify-content-center">
-                <input class="btn-check " type="radio" name="reason" value="dolores" id="card4">
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card4" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
-                    <div class="col-12 " >
-                      <i class="material-icons md-large ">medication</i>
-                    </div>
-                    <div class="col-12 ">
-                      <span style="font-size: 300%;">DOCTORS</span>
-                    </div>
-                  </div>
-                </label>
-
-                <input class="btn-check " type="radio" name="reason" value="school" id="card5">
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card5" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
-                    <div class="col-12 " >
-                      <i class="material-icons md-large ">directions_bus_filled</i>
-                    </div>
-                    <div class="col-12 ">
-                      <span style="font-size: 300%;">SCHOOL TRIP</span>
-                    </div>
-                  </div>
-                </label>
-
-                <input class="btn-check" type="radio" name="reason" value="lunch" id="card6" checked>
-                <label class="btn btn-outline-info btn-outline-light d-flex align-items-center justify-content-center text-nowrap border border-5 rounded-0 text-bold" for="card6" style="height: 400px; width: 400px;" >
-                  <div class="row row-cols-2">
-                    <div class="col-12 " >
-                      <i class="material-icons md-large ">restaurant</i>
-                    </div>
-                    <div class="col-12 ">
-                      <span style="font-size: 300%;">LUNCH</span>
-                    </div>
-                  </div>
-                </label>
-              </div>
-            </div>
           </div>
 
-          <div class="col-3 border border-5 rounded-0 d-flex align-items-cente justify-content-center container-fluid" style="height: 940px; width: 400px;">
-            <div class="row d-flex align-items-center justify-content-center container-fluid">
-              <div class="row-5 " >
-                <div class="col-12 text-white text-center ">
-                  <p class="text-white text-bold" style="font-size: 300%;"> <?php echo $student_aa['first_name']; ?> </p>
-                  <p class="text-white text-bold" style="font-size: 300%;"> <?php echo $student_aa['last_name']; ?> </p>
 
-                  <!-- <p class="text-white text-bold" style="font-size: 300%;">MACGREGOR</p>
-                  <p class="text-white text-bold" style="font-size: 300%;">MATTHEWS</p> -->
-                </div>
-              </div>
+          </div>
 
-              <div class="row-2 d-flex align-items-cente justify-content-center">
-                <a class="btn btn-danger rounded-0 text-bold border border-light border-5 " href="index.php?page=home" role="button">
-                  <div class="row">
-                    <div class="col-4">
-                      <p class="text-white text-bold" style="font-size: 300%;">BACK</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
 
-              <div class="row-5">
-                <div class="col-12 d-flex align-items-cente justify-content-center">
-                  <!-- <input type="checkbox" class="form-check-input" name="studentID" value= php {$studentID} ?>"id="studentID">
-                  <label type="form-check-label" for="studentID"> ?php echo "$student_ID";?> -->
 
-                  <button class="btn btn-success d-flex align-items-center justify-content-center text-nowrap  rounded-0 text-bold border border-light border-5 padding-0 gx-0" type="submit" class="btn" id="submit" >
-                    <div class="row row-cols-2">
+          <!-- row for botom 3 cards -->
+          <div class="row p-2 d-flex align-items-cente justify-content-center">
+
+            <!-- card4 -->
+            <div class="col-auto">
+
+                  <!-- input with the label -->
+                  <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card4">
+                  <label class="btn btn-outline-info btn-outline-light   border rounded-0 text-bold" for="card4" style="height:300px; width: 300px" >
+
+                      <!-- icon -->
+                      <div class="col-12" >
+                        <i class="material-icons md-large ">edit</i>
+                      </div>
+
+                      <!-- text -->
+                      <div class="col-12">
+                        <span style="font-size: 300%;">CUSTOM</span>
+                      </div>
+                  </label>
+
+            </div>
+
+
+            <!-- card5 -->
+            <div class="col-auto">
+
+                  <!-- input with the label -->
+                  <input class="btn-check " type="radio" name="reason" value="sports" id="card5">
+                  <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold" for="card5" style="height:300px; width: 300px">
+
+                        <!-- icon -->
+                        <div class="col-12">
+                          <i class="material-icons md-large ">sports_basketball</i>
+                        </div>
+
+                        <!-- text -->
+                        <div class="col-12">
+                          <span style="font-size: 300%;">SPORTS</span>
+                        </div>
+
+                  </label>
+
+            </div>
+
+            <!-- card6 -->
+            <div class="col-auto">
+
+                  <!-- input with the label -->
+                  <input class="btn-check " type="radio" name="reason" value="sick" id="card6">
+                  <label class="btn btn-outline-info btn-outline-light text-nowrap border rounded-0 text-bold" for="card6" style="height:300px; width: 300px" >
+                    <div class="row-4">
+
+                      <!-- icon -->
                       <div class="col-12 " >
-                        <i class="material-icons md-large ">done</i>
+                        <i class="material-icons md-large ">sick</i>
                       </div>
+
+                      <!-- text -->
                       <div class="col-12 ">
-                        <span style="font-size: 300%;">SUBMIT</span>
+                        <span style="font-size: 300%;">SICK</span>
                       </div>
                     </div>
-                  </button>
-                </div>
-              </div>
+                  </label>
+
             </div>
-          </div>
-      </form>
-    </div>
-    <?php }
-    } ?>
+
+
+      </div>
+    </form>
+  <?php }} ?>
   </body>
 </html>
