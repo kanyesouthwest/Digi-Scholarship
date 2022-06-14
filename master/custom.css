@@ -14,7 +14,6 @@
 body {
 
 height: 100vh;
-
 background-color: rgb(0,65,122);
 
 }
@@ -30,6 +29,31 @@ background-color: rgb(0,65,122);
 }
 
 
+.card {
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 49, 85);
+  border-radius: .9rem .9rem .0rem .9rem;
+  margin: 20px;
+  border: 0px;
+  overflow:auto;
+
+
+}
+
+.card:checked {
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 49, 85);
+
+}
+
+.sidebar {
+
+  border-radius: .9rem .9rem .0rem .9rem;
+
+}
+
 
 
 
@@ -41,11 +65,7 @@ background-color: rgb(0,65,122);
     height: 100vh;
 }
 
-.h1 {
 
-  color: rgb(255, 0, 0);
-
-}
 
 .material-icons.md-large { font-size: 200px; }
 

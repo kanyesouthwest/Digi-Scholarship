@@ -66,11 +66,18 @@
     <div class="container-fluid d-flex align-items-cente justify-content-center vstack" style="text: rgb(0, 49, 85);">
 
       <!-- the begining of the form -->
-      <form class="" action="index.php?page=complete "  method="post">
+      <form class="" action="index.php?page=complete"  method="post">
+
+        <!-- row to hold form  -->
+        <div class="row p-5 hm-5 d-flex align-items-cente justify-content-center">
+
+
+        <!-- col for the seletchon cards -->
+        <div class="col-9 p-5">
 
 
         <!-- row for top 3 cards -->
-        <div class="row p-2 d-flex align-items-cente justify-content-center">
+        <div class="row d-flex align-items-cente justify-content-center ">
 
 
           <!-- card1 custom as well -->
@@ -78,12 +85,13 @@
 
                 <!-- input with the label -->
                 <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1">
-                <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold rounded-start rounded-top bg-light" for="card1" style="height:300px; width: 300px;">
+                <label class="btn card d-flex btn-outline-info" for="card1" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
                     <div class="col-12" >
                       <i class="material-icons md-large ">edit</i>
                     </div>
+
                     <!-- text -->
                     <div class="col-12">
                       <span style="font-size: 300%;">CUSTOM</span>
@@ -97,8 +105,8 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check " type="radio" name="reason" value="sports" id="card2">
-                <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold rounded-start rounded-top rounded-5" for="card2" style="height:300px; width: 300px">
+                <input class="btn-check form-check" type="radio" name="reason" value="sports" id="card2">
+                <label class="btn card btn-outline-info" for="card2" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
                       <div class="col-12">
@@ -119,7 +127,7 @@
 
                 <!-- input with the label -->
                 <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
-                <label class="btn btn-outline-info btn-outline-light text-nowrap border rounded-0 text-bold" for="card3" style="height:300px; width: 300px" >
+                <label class="btn card btn-outline-info ratio" for="card3" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
                     <!-- icon -->
@@ -136,78 +144,111 @@
 
           </div>
 
+        </div>
 
+
+
+        <!-- row for botom 3 cards -->
+        <div class="row d-flex align-items-cente justify-content-center ">
+
+
+          <!-- card4 -->
+          <div class="col-auto">
+
+                <!-- input with the label -->
+                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card4">
+                <label class="btn card d-flex btn-outline-info" for="card4" style="height: 300px; width: 300px;" >
+
+                    <!-- icon -->
+                    <div class="col-12" >
+                      <i class="material-icons md-large ">edit</i>
+                    </div>
+
+                    <!-- text -->
+                    <div class="col-12">
+                      <span style="font-size: 300%;">CUSTOM</span>
+                    </div>
+                </label>
+          <!-- closes card 4 -->
           </div>
 
 
+          <!-- card5 -->
+          <div class="col-auto">
 
-          <!-- row for botom 3 cards -->
-          <div class="row p-2 d-flex align-items-cente justify-content-center">
-
-            <!-- card4 -->
-            <div class="col-auto">
-
-                  <!-- input with the label -->
-                  <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card4">
-                  <label class="btn btn-outline-info btn-outline-light   border rounded-0 text-bold" for="card4" style="height:300px; width: 300px" >
+                <!-- input with the label -->
+                <input class="btn-check form-check" type="radio" name="reason" value="sports" id="card5">
+                <label class="btn card btn-outline-info" for="card5" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
-                      <div class="col-12" >
-                        <i class="material-icons md-large ">edit</i>
+                      <div class="col-12">
+                        <i class="material-icons md-large ">sports_basketball</i>
                       </div>
 
                       <!-- text -->
                       <div class="col-12">
-                        <span style="font-size: 300%;">CUSTOM</span>
-                      </div>
-                  </label>
-
-            </div>
-
-
-            <!-- card5 -->
-            <div class="col-auto">
-
-                  <!-- input with the label -->
-                  <input class="btn-check " type="radio" name="reason" value="sports" id="card5">
-                  <label class="btn btn-outline-info btn-outline-light border rounded-0 text-bold" for="card5" style="height:300px; width: 300px">
-
-                        <!-- icon -->
-                        <div class="col-12">
-                          <i class="material-icons md-large ">sports_basketball</i>
-                        </div>
-
-                        <!-- text -->
-                        <div class="col-12">
-                          <span style="font-size: 300%;">SPORTS</span>
-                        </div>
-
-                  </label>
-
-            </div>
-
-            <!-- card6 -->
-            <div class="col-auto">
-
-                  <!-- input with the label -->
-                  <input class="btn-check " type="radio" name="reason" value="sick" id="card6">
-                  <label class="btn btn-outline-info btn-outline-light text-nowrap border rounded-0 text-bold" for="card6" style="height:300px; width: 300px" >
-                    <div class="row-4">
-
-                      <!-- icon -->
-                      <div class="col-12 " >
-                        <i class="material-icons md-large ">sick</i>
+                        <span style="font-size: 300%;">SPORTS</span>
                       </div>
 
-                      <!-- text -->
-                      <div class="col-12 ">
-                        <span style="font-size: 300%;">SICK</span>
-                      </div>
+                </label>
+          <!-- closes card 5 -->
+          </div>
+
+          <!-- card 6 -->
+          <div class="col-auto">
+
+                <!-- input with the label -->
+                <input class="btn-check " type="radio" name="reason" value="sick" id="card6">
+                <label class="btn card btn-outline-info ratio" for="card6" style="height: 300px; width: 300px;" >
+                  <div class="row-4">
+
+                    <!-- icon -->
+                    <div class="col-12 " >
+                      <i class="material-icons md-large ">sick</i>
                     </div>
-                  </label>
 
+                    <!-- text -->
+                    <div class="col-12 ">
+                      <span style="font-size: 300%;">Lunch</span>
+                    </div>
+                  </div>
+                </label>
+          <!-- closes card 5 -->
+          </div>
+      <!-- close botome 3 cards -->
+      </div>
+    <!-- closes selection cards -->
+    </div>
+
+
+        <!-- col for side colom -->
+        <div class="col-3 p-5" >
+          <!-- the side bar -->
+          <div class="col gap-5 sidebar border border-5 d-flex align-items-cente justify-content-center vstack" style="height: 100%">
+
+            <!-- names -->
+            <div class="col-12 bg-light  d-flex align-items-cente justify-content-center ">
+              <?php
+                  echo $student_aa['first_name'];
+                  ?> <br> <?php
+                  echo $student_aa['last_name'];
+              ?>
             </div>
 
+            <!-- submit button -->
+            <div class="col-12 d-flex align-items-cente justify-content-center">
+              <button type="button " class="rounded-circle bg-success border border-0 text-light fs-2 text-uppercase fw-bold" name="button" style="height: 200px; width: 200px;">Submit</button>
+            </div>
+
+            <!-- bake button -->
+            <div class="col-12 d-flex align-items-cente justify-content-center">
+              <button type="button " class="btn btn-link text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold" name="button" style="height: 150px; width: 150px;">back</button>
+            </div>
+
+          <!-- closes the side bare -->
+          </div>
+        <!-- closes col to hold sidebar -->
+        </div>
 
       </div>
     </form>
