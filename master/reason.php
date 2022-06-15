@@ -156,17 +156,17 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card4">
+                <input class="btn-check form-check" type="radio" name="reason" value="DOCTORS" id="card4">
                 <label class="btn card d-flex btn-outline-info" for="card4" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
                     <div class="col-12" >
-                      <i class="material-icons md-large ">edit</i>
+                      <i class="material-icons md-large ">medication</i>
                     </div>
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 300%;">CUSTOM</span>
+                      <span style="font-size: 300%;">DOCTORS</span>
                     </div>
                 </label>
           <!-- closes card 4 -->
@@ -177,17 +177,17 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="sports" id="card5">
+                <input class="btn-check form-check" type="radio" name="reason" value="SCHOOL TRIP" id="card5">
                 <label class="btn card btn-outline-info" for="card5" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
                       <div class="col-12">
-                        <i class="material-icons md-large ">sports_basketball</i>
+                        <i class="material-icons md-large ">directions_bus_filled</i>
                       </div>
 
                       <!-- text -->
                       <div class="col-12">
-                        <span style="font-size: 300%;">SPORTS</span>
+                        <span style="font-size: 300%;">SCHOOL TRIP</span>
                       </div>
 
                 </label>
@@ -198,13 +198,13 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check " type="radio" name="reason" value="sick" id="card6">
-                <label class="btn card btn-outline-info ratio" for="card6" style="height: 300px; width: 300px;" >
+                <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" checked >
+                <label class="btn card btn-outline-info ratio"  for="card6" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
                     <!-- icon -->
                     <div class="col-12 " >
-                      <i class="material-icons md-large ">sick</i>
+                      <i class="material-icons md-large ">restaurant</i>
                     </div>
 
                     <!-- text -->
@@ -213,7 +213,7 @@
                     </div>
                   </div>
                 </label>
-          <!-- closes card 5 -->
+          <!-- closes card 6 -->
           </div>
       <!-- close botome 3 cards -->
       </div>
@@ -224,15 +224,24 @@
         <!-- col for side colom -->
         <div class="col-3 p-5" >
           <!-- the side bar -->
-          <div class="col gap-5 sidebar border border-5 d-flex align-items-cente justify-content-center vstack" style="height: 100%">
+          <div class="col gap-5 sidebar border border-5 d-flex align-items-cente justify-content-center overflow-hidden vstack" style="height: 100%">
 
             <!-- names -->
-            <div class="col-12 bg-light  d-flex align-items-cente justify-content-center ">
+            <div class="row bg-light d-flex align-items-cente justify-content-center ">
+              <!-- frist name -->
+              <div class="col-12 d-flex align-items-cente justify-content-center">
               <?php
                   echo $student_aa['first_name'];
-                  ?> <br> <?php
+              ?>
+              </div>
+
+              <!-- last_name -->
+              <div class="col-12 d-flex align-items-cente justify-content-center">
+               <?php
                   echo $student_aa['last_name'];
               ?>
+              </div>
+            <!-- close names -->
             </div>
 
             <!-- submit button -->
@@ -242,7 +251,8 @@
 
             <!-- bake button -->
             <div class="col-12 d-flex align-items-cente justify-content-center">
-              <button type="button " class="btn btn-link text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold" name="button" style="height: 150px; width: 150px;">back</button>
+              <a href="#"></a>
+              <button type="button" class="btn btn-link text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold" href="index.php?page=home"  name="button" style="height: 150px; width: 150px;">back</button>
             </div>
 
           <!-- closes the side bare -->
