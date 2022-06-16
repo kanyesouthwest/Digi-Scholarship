@@ -94,7 +94,7 @@
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 300%;">CUSTOM</span>
+                      <span style="font-size: 250%;">CUSTOM</span>
                     </div>
                 </label>
 
@@ -115,7 +115,7 @@
 
                       <!-- text -->
                       <div class="col-12">
-                        <span style="font-size: 300%;">SPORTS</span>
+                        <span style="font-size: 250%;">SPORTS</span>
                       </div>
 
                 </label>
@@ -137,7 +137,7 @@
 
                     <!-- text -->
                     <div class="col-12 ">
-                      <span style="font-size: 300%;">SICK</span>
+                      <span style="font-size: 250%;">SICK</span>
                     </div>
                   </div>
                 </label>
@@ -166,7 +166,7 @@
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 300%;">DOCTORS</span>
+                      <span style="font-size: 250%;">DOCTORS</span>
                     </div>
                 </label>
           <!-- closes card 4 -->
@@ -187,7 +187,7 @@
 
                       <!-- text -->
                       <div class="col-12">
-                        <span style="font-size: 300%;">SCHOOL TRIP</span>
+                        <span style="font-size: 250%;;">SCHOOL TRIP</span>
                       </div>
 
                 </label>
@@ -209,7 +209,7 @@
 
                     <!-- text -->
                     <div class="col-12 ">
-                      <span style="font-size: 300%;">Lunch</span>
+                      <span style="font-size: 250%;">Lunch</span>
                     </div>
                   </div>
                 </label>
@@ -251,8 +251,9 @@
 
             <!-- bake button -->
             <div class="col-12 d-flex align-items-cente justify-content-center">
-              <a href="#"></a>
-              <button type="button" class="btn btn-link text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold" href="index.php?page=home"  name="button" style="height: 150px; width: 150px;">back</button>
+                <!-- link with a button inside it -->
+                <a href="index.php?page=home"> <button type="button" class=" text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold"  name="back button" style="height: 150px; width: 150px;">back</button> </a>
+
             </div>
 
           <!-- closes the side bare -->
