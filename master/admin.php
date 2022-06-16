@@ -100,18 +100,17 @@
             <br>
             <a href="export_old.php">Export list of historical records to CSV </a>
             <br>
-            <a href="logout.php">Click here to logout</a>
-            <p>Previously signed out daily students</p>
-            
+            <a href="index.php?page=import">Import students</a>
+            <br>
+            <a href="index.php?page=logout">Click here to logout</a>
 
+
+            <p>Previously signed out daily students</p>
             <?php
 
-            $group_students_sql = "SELECT student_details.student_ID, student_details.first_name, student_details.last_name, student_transactions.reason, student_transactions.time_out, student_transactions.group_ID,
-                                            GROUP_CONCAT(DISTINCT student_transactions.time_in
-                                                        ORDER BY student_transactions.group_ID DESC SEPARATOR ' ') AS time_in
-                                        FROM student_transactions
-                                        JOIN student_details ON student_transactions.student_ID=student_details.student_ID
-                                        GROUP BY student_transactions.group_ID";
+            $group_students_sql = "SELECT group_ID AS gID, student_ID, first_name, last_name, reason, time_out, 
+                                (SELECT time_in FROM student_transactions WHERE group_ID=gID AND time_in != '') 
+                                AS time_in FROM `student_transactions` GROUP BY group_ID";
             $group_students_qry = mysqli_query($dbconnect, $group_students_sql);
             $group_students_aa = mysqli_fetch_assoc($group_students_qry);
 

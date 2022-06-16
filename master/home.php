@@ -16,11 +16,7 @@
 
 <div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
 
-          
-
-          <p class="text-light fs-1" href="index.php?page=buttonns" role="button">Swipe Card</p>
-
-
+          <p class="text-light fs-1">Swipe Card</p>
 
           <form action="index.php?page=reason" method="post">
             <div class="form-group">
