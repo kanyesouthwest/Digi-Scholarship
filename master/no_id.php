@@ -1,16 +1,29 @@
 <body>
 
-<div class="container d-flex align-items-center justify-content-center vstack text-light" >
+  <!-- contaner -->
+  <div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
+    <!-- row to hold logo and text box -->
+    <div class="row g-5 d-flex align-items-center justify-content-center">
 
-      <h1> no such id </h1>
+      <!-- stac logo -->
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <img src="photo/StACLogoWhite.png" class="" alt="StACLogo" style="height: 200px; width: 300px;">
+      </div>
 
-      <p>you will be redorected in 3 secods</p>
+      <!-- text box for swipe card -->
+      <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
+        <p class="text-light display-1">no such id</p>
+        <p>you will be redorected in 3 secods</p>
+      </div>
 
-</div>
+    <!-- row to hold logo and text box closee-->
+    </div>
 
+  <!-- contaner close-->
+  </div>
 
-<?php
-  header('Refresh:3 ; URL=index.php?page=home');
- ?>
+  <?php
+    header('Refresh:3 ; URL=index.php?page=home');
+   ?>
 
 </body>

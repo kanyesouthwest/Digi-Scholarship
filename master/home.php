@@ -14,21 +14,33 @@
 
   <body>
 
-<div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
+    <!-- contaner -->
+    <div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
+      <!-- row to hold logo and text box -->
+      <div class="row g-5 d-flex align-items-center justify-content-center">
 
-          <p class="text-light fs-1">Swipe Card</p>
+        <!-- stac logo -->
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <img src="photo/StACLogoWhite.png" class="" alt="StACLogo" style="height: 200px; width: 300px;">
+        </div>
 
-          <form action="index.php?page=reason" method="post">
-            <div class="form-group">
-                <label for="student_ID"></label>
-                <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success " onblur="this.focus()" style=" color: rgb(0,65,122); --bs-bg-opacity: .0;">
-              </div>
+        <!-- text box for swipe card -->
+        <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5" style="height: 200px; width: 600px;">
+          <p class="text-light display-2"><b>SWIPE</b> CARD</p>
+        </div>
 
+      <!-- row to hold logo and text box closee-->
       </div>
-    </div>
-  </div>
 
-</div>
+      <!-- form to hold endter for cards -->
+      <form action="index.php?page=reason" method="post">
+        <div class="form-group">
+          <label for="student_ID"></label>
+          <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success " onblur="this.focus()" style=" color: rgba(0,0,0,0); --bs-bg-opacity: .0;">
+        </div>
+
+    <!-- contaner close-->
+    </div>
 
   </body>
 </html>

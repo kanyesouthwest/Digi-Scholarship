@@ -224,7 +224,7 @@
         <!-- col for side colom -->
         <div class="col-3 p-5" >
           <!-- the side bar -->
-          <div class="col gap-5 sidebar border border-5 d-flex align-items-cente justify-content-center overflow-hidden vstack" style="height: 100%">
+          <div class="col gap-5 roundedconners border border-5 d-flex align-items-cente justify-content-center overflow-hidden vstack" style="height: 100%">
 
             <!-- names -->
             <div class="row bg-light d-flex align-items-cente justify-content-center ">
