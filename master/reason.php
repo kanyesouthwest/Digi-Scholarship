@@ -9,16 +9,20 @@
 
     <?php
     session_start();
-      // Declare variable using ID from form
-      // $student_ID = mysqli_real_escape_string($dbconnect, $_POST['student_ID']);
 
+    // Check if submit form without entering ID
+    if(empty($_POST['student_ID'])) {
+      header("Location:index.php?page=home");
+    } else {
+
+      // Declare variable using ID from form
       $_SESSION['student_ID'] = $_POST['student_ID'];
       $student_ID = $_POST['student_ID'];
 
       // Select all information depnding on ID
       $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
       $student_qry = mysqli_query($dbconnect, $student_sql);
-      $student_aa = mysqli_fetch_assoc($student_qry);
+      $student_aa = mysqli_fetch_assoc($student_qry); 
 
       // Confirm if sudent has/has not signed out
       $search_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID";
@@ -105,7 +109,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="sports" id="card2">
+                <input class="btn-check form-check" type="radio" name="reason" value="Sport" id="card2">
                 <label class="btn card btn-outline-info" for="card2" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
@@ -126,7 +130,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check " type="radio" name="reason" value="sick" id="card3">
+                <input class="btn-check " type="radio" name="reason" value="Sick" id="card3">
                 <label class="btn card btn-outline-info ratio" for="card3" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
@@ -156,7 +160,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="DOCTORS" id="card4">
+                <input class="btn-check form-check" type="radio" name="reason" value="Doctor" id="card4">
                 <label class="btn card d-flex btn-outline-info" for="card4" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
@@ -166,7 +170,7 @@
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 250%;">DOCTORS</span>
+                      <span style="font-size: 250%;">DOCTOR</span>
                     </div>
                 </label>
           <!-- closes card 4 -->
@@ -177,7 +181,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="SCHOOL TRIP" id="card5">
+                <input class="btn-check form-check" type="radio" name="reason" value="School Trip" id="card5">
                 <label class="btn card btn-outline-info" for="card5" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
@@ -194,10 +198,14 @@
           <!-- closes card 5 -->
           </div>
 
-          <!-- card 6 -->
+          <?php
+            if ($student_aa['year'] == 13 ) {
+          ?>
+          <!-- card 6 Y13 -->
           <div class="col-auto">
 
                 <!-- input with the label -->
+
                 <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" checked >
                 <label class="btn card btn-outline-info ratio"  for="card6" style="height: 300px; width: 300px;" >
                   <div class="row-4">
@@ -209,17 +217,45 @@
 
                     <!-- text -->
                     <div class="col-12 ">
-                      <span style="font-size: 250%;">Lunch</span>
+                      <span style="font-size: 250%;">LUNCH</span>
                     </div>
                   </div>
                 </label>
-          <!-- closes card 6 -->
+          <!-- closes card 6 Y13-->
           </div>
+
+
+          <?php 
+            } if ($student_aa['year'] == 12 ) {
+          ?>
+          <!-- card 6 Y12 -->
+          <div class="col-auto">
+
+            <!-- input with the label -->
+            <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" disabled >
+            <label class="btn card btn-outline-info ratio"  for="card6" style="height: 300px; width: 300px;" >
+              <div class="row-4">
+
+                <!-- icon -->
+                <div class="col-12 " >
+                  <i class="material-icons md-large ">restaurant</i>
+                </div>
+
+                <!-- text -->
+                <div class="col-12 ">
+                  <span style="font-size: 250%;">LUNCH</span>
+                </div>
+              </div>
+            </label>
+            <!-- closes card 6 Y12 -->
+            </div>
+            <?php } ?>
+
+
       <!-- close botome 3 cards -->
       </div>
     <!-- closes selection cards -->
     </div>
-
 
         <!-- col for side colom -->
         <div class="col-3 p-5" >
@@ -237,7 +273,7 @@
 
               <!-- last_name -->
               <div class="col-12 d-flex align-items-cente justify-content-center">
-               <?php
+              <?php
                   echo $student_aa['last_name'];
               ?>
               </div>
@@ -263,6 +299,6 @@
 
       </div>
     </form>
-  <?php }} ?>
+  <?php }}} ?>
   </body>
 </html>

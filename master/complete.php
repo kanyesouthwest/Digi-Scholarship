@@ -65,10 +65,11 @@
             $group_ID_unique = $group_ID_aa['group_ID'];
             $group_ID_unique = $group_ID_unique + 1;
 
+
             // Inserts data into transactions table
             $sign_out_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, first_name, last_name, reason, time_out) VALUES ('$group_ID_unique','$student_ID','$first_name','$last_name','$reason', (NOW()))";
             $sign_out_transaction_qry = mysqli_query($dbconnect, $sign_out_transaction_sql);
-
+            
             ?>
 
 
@@ -85,7 +86,7 @@
                 <!-- text box for swipe card -->
                 <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
                   <p class="text-light display-1">You have signed out</p>
-                  <p>you will be redorected in 3 secods</p>
+                  <p>you will be redirected in 2 seconds</p>
                 </div>
 
               <!-- row to hold logo and text box closee-->
