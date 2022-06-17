@@ -103,6 +103,16 @@
             <a href="index.php?page=import">Import students</a>
             <br>
             <a href="index.php?page=logout">Click here to logout</a>
+            <form action="index.php?page=uploadingcsv" method="post" enctype="multipart/form-data">
+
+                <label for="formFile" class="form-label">Select CSV</label>
+                <input type="file" class="form-control" name="csvfile" id="csvfile">
+
+                <div class="mb-3">
+                    
+                </div>
+                <input type="submit">
+            </form>
 
 
             <p>Previously signed out daily students</p>

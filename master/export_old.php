@@ -4,12 +4,9 @@
 include ("dbconnect.php");
 
 // Fetch records from database 
-$export_query = $dbconnect->query("SELECT student_details.student_ID, student_details.first_name, student_details.last_name, student_transactions.reason, student_transactions.time_out, student_transactions.group_ID,
-                                    GROUP_CONCAT(DISTINCT student_transactions.time_in
-                                        ORDER BY student_transactions.group_ID DESC SEPARATOR ' ') AS time_in
-                                    FROM student_transactions
-                                    JOIN student_details ON student_transactions.student_ID=student_details.student_ID
-                                        GROUP BY student_transactions.group_ID"); 
+$export_query = $dbconnect->query("SELECT group_ID AS gID, student_ID, first_name, last_name, reason, time_out, 
+                                    (SELECT time_in FROM student_transactions WHERE group_ID=gID AND time_in != '') 
+                                    AS time_in FROM `student_transactions` GROUP BY group_ID"); 
 
 if($export_query->num_rows > 0) { 
     $delimiter = ","; 
@@ -25,6 +22,7 @@ if($export_query->num_rows > 0) {
     // Output each row of the data, format line as csv and write to file pointer 
     while($row = $export_query->fetch_assoc()){ 
         $lineData = array($row['student_ID'], $row['first_name'], $row['last_name'], $row['reason'], $row['time_out'], $row['time_in']); 
+                            
         fputcsv($f, $lineData, $delimiter); 
     } 
 
@@ -41,7 +39,7 @@ if($export_query->num_rows > 0) {
     // If no students found in database
     } else {
         echo "No records in database";
-        ?> <a href="secure.php">Go Back</a><?php
+        ?> <a href="index.php?page=admin">Go Back</a><?php
     }
 exit; 
 
