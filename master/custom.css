@@ -5,6 +5,14 @@
   font-family: din;
 }
 
+/* adds bold */
+@font-face {
+  src: url(fonts/din/DinPro-Bold.otf);
+  font-weight: bold;
+  font-family: din;
+
+}
+
 /* changes the name of the custom font */
 * {
   font-family: din;
@@ -26,10 +34,6 @@ background-image: radial-gradient(rgb(91, 130, 156) 10%, rgb(0, 65, 112), rgb(0,
     box-shadow: none;
 }
 
-/* removes halo form butons*/
-.btn:focus {
-    outline: 0;
-}
 
 /* css for the resons cards */
 .card {

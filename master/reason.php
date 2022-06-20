@@ -22,7 +22,7 @@
       // Select all information depnding on ID
       $student_sql = "SELECT * FROM student_details WHERE student_ID = $student_ID";
       $student_qry = mysqli_query($dbconnect, $student_sql);
-      $student_aa = mysqli_fetch_assoc($student_qry); 
+      $student_aa = mysqli_fetch_assoc($student_qry);
 
       // Confirm if sudent has/has not signed out
       $search_sql = "SELECT * FROM student_log WHERE student_ID = $student_ID";
@@ -88,7 +88,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1">
+                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1" disabled required>
                 <label class="btn card d-flex btn-outline-info" for="card1" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
@@ -109,7 +109,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="Sport" id="card2">
+                <input class="btn-check form-check" type="radio" name="reason" value="Sport" id="card2" disabled required>
                 <label class="btn card btn-outline-info" for="card2" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
@@ -130,7 +130,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check " type="radio" name="reason" value="Sick" id="card3">
+                <input class="btn-check " type="radio" name="reason" value="Sick" id="card3" disabled required>
                 <label class="btn card btn-outline-info ratio" for="card3" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
@@ -160,7 +160,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="Doctor" id="card4">
+                <input class="btn-check form-check" type="radio" name="reason" value="Doctor" id="card4" disabled required>
                 <label class="btn card d-flex btn-outline-info" for="card4" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
@@ -181,7 +181,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="School Trip" id="card5">
+                <input class="btn-check form-check" type="radio" name="reason" value="School Trip" id="card5" disabled required>
                 <label class="btn card btn-outline-info" for="card5" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
@@ -206,8 +206,8 @@
 
                 <!-- input with the label -->
 
-                <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" checked >
-                <label class="btn card btn-outline-info ratio"  for="card6" style="height: 300px; width: 300px;" >
+                <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" required >
+                <label class="btn card btn-outline-info"  for="card6" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
                     <!-- icon -->
@@ -225,7 +225,7 @@
           </div>
 
 
-          <?php 
+          <?php
             } if ($student_aa['year'] == 12 ) {
           ?>
           <!-- card 6 Y12 -->
@@ -233,7 +233,7 @@
 
             <!-- input with the label -->
             <input class="btn-check " type="radio"  name="reason" value="Lunch" id="card6" disabled >
-            <label class="btn card btn-outline-info ratio"  for="card6" style="height: 300px; width: 300px;" >
+            <label class="btn card btn-outline-info"  for="card6" style="height: 300px; width: 300px;" >
               <div class="row-4">
 
                 <!-- icon -->
@@ -260,10 +260,10 @@
         <!-- col for side colom -->
         <div class="col-3 p-5" >
           <!-- the side bar -->
-          <div class="col gap-5 roundedconners border border-5 d-flex align-items-cente justify-content-center overflow-hidden vstack" style="height: 100%">
+          <div class="col gap-5 roundedconners border border-5 border-light d-flex align-items-cente justify-content-center overflow-hidden vstack" style="height: 100%">
 
             <!-- names -->
-            <div class="row bg-light d-flex align-items-cente justify-content-center ">
+            <div class="row bg-light d-flex align-items-cente justify-content-center display-6 p-1">
               <!-- frist name -->
               <div class="col-12 d-flex align-items-cente justify-content-center">
               <?php
@@ -272,7 +272,7 @@
               </div>
 
               <!-- last_name -->
-              <div class="col-12 d-flex align-items-cente justify-content-center">
+              <div class="col-12 d-flex align-items-cente justify-content-center display-6">
               <?php
                   echo $student_aa['last_name'];
               ?>
