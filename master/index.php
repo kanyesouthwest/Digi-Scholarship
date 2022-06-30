@@ -5,8 +5,6 @@
   <title>Sign out system</title>
   <!-- Bootstrap link -->
   <link rel="stylesheet" href="Bootstrap/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- Icons link -->
-  <link rel="stylesheet" href="Bootstrap/bootstrap-icons.css">
   <!-- Link to custom stylesheet -->
   <link rel="stylesheet" href="custom.css">
   <!-- link to google icons -->
