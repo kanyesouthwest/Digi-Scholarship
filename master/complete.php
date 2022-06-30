@@ -92,32 +92,19 @@
               <!-- row to hold logo and text box closee-->
               </div>
 
+              <form action="index.php?page=reason" method="post">
+                <div class="form-group">
+                  <label for="student_ID"></label>
+                  <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success " onblur="this.focus()" style=" color: rgba(0,0,0,0); --bs-bg-opacity: .0;">
+                </div>
+              </form>
+              
             <!-- contaner close-->
             </div>
 
             <?php
             header('Refresh:3 ; URL=index.php?page=home');
-
-            } else {
-        //     // Update student record with time in
-        //     $sign_in_sql = "UPDATE student_log SET time_in = (NOW()), in_school = 1 WHERE student_ID = $student_ID ORDER BY time_out DESC LIMIT 1";
-        //     $sign_in_qry = mysqli_query($dbconnect, $sign_in_sql);
-
-
-        //     $get_group_sql = "SELECT group_ID FROM student_transactions WHERE student_ID = $student_ID ORDER BY group_ID DESC LIMIT 1";
-        //     $get_group_qry = mysqli_query($dbconnect, $get_group_sql);
-        //     $get_group_aa = mysqli_fetch_assoc($get_group_qry);
-
-
-        //     $non_unique_group_ID = $get_group_aa['group_ID'];
-
-
-        //     $sign_in_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, time_in) VALUES ('$non_unique_group_ID','$student_ID', (NOW()))";
-        //     $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
-
-        //     echo "You have signed in";
-        //     ?> <a href="index.php">Click here to go back</a> <?php
-          }
+            }
         }
     ?>
 

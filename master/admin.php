@@ -154,17 +154,31 @@
 
                         <tbody>
                             <?php
-                            do { ?>
-                                <tr data-toggle="collapse" data-target="#demo" class="accordion-toggle">
+                            $list = [];
+
+                            do { 
+                                $student_ID = $group_students_aa['student_ID']; 
+                                    if (!in_array($student_ID, $list)) {
+                                echo "<tr data-toggle='collapse' data-target='#demo$group_students_aa[student_ID]' class='accordion-toggle'>";
+                                ?>
+                                    <!-- pog -->
                                     <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
                                     <?php 
-                                    echo "<td> $group_students_aa[student_ID] </td>";
-                                    echo "<td> $group_students_aa[first_name] </td>";
-                                    echo "<td> $group_students_aa[last_name] </td>";
+                                    
+                                        echo "<td> $group_students_aa[student_ID] </td>";
+                                        echo "<td> $group_students_aa[first_name] </td>";
+                                        echo "<td> $group_students_aa[last_name] </td>";
+                                        array_push($list, $group_students_aa['student_ID']);
+                                    
+                                    
+
                                     ?>
                                 </tr>
+                                
                                 <td colspan="12" class="hiddenRow">
-                                    <div class="accordian-body collapse" id="demo"> 
+                                    <?php
+                                    echo "<div class='accordian-body collapse' id='demo$group_students_aa[student_ID]'>"; 
+                                    ?>
                                         <table class="table table-striped">
                                             <thead>
                                                 <tr class="info">
@@ -174,17 +188,36 @@
                                                 </tr>
                                             </thead>	
                                             <tbody>
-                                                <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo">
                                                     <?php
-                                                    echo "<td> $group_students_aa[reason] </td>";
-                                                    echo "<td> $group_students_aa[time_out] </td>";
-                                                    echo "<td> $group_students_aa[time_in] </td>";
+                                                    $group1_students_sql = "SELECT group_ID AS gID, student_ID, first_name, last_name, reason, time_out, 
+                                                            (SELECT time_in FROM student_transactions WHERE group_ID=gID AND time_in != '') 
+                                                            AS time_in FROM `student_transactions` WHERE student_ID = '$group_students_aa[student_ID]' GROUP BY group_ID ";
+                                                            
+                                                        $group1_students_qry = mysqli_query($dbconnect, $group1_students_sql);
+                                                        $group1_students_aa = mysqli_fetch_assoc($group1_students_qry);
+                                                    do {
+                                                        ?>
+                                                        <tr data-toggle="collapse" class="accordion-toggle" data-target="#demo">
+                                                        <?php
+                                                        
+                                                        echo "<td> $group1_students_aa[reason] </td>";
+                                                        echo "<td> $group1_students_aa[time_out] </td>";
+                                                        echo "<td> $group1_students_aa[time_in] </td>";
+                                                        ?>
+                                                        </tr>
+                                                        <?php
+                                                    } while ($group1_students_aa = mysqli_fetch_assoc($group1_students_qry));
+                                                    
+                                                    
                                                     ?>
-                                                </tr>
+                                        
                                     </div>
-                                </td>
+                                        </table>
+                                        </td>
+                                        <?php
+                                    }?>
                                 <?php } while ($group_students_aa = mysqli_fetch_assoc($group_students_qry)); ?>
-                            </tbody>
+                                            </tbody>
                         </table>
                 </div>
             </div>
