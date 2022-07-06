@@ -92,6 +92,7 @@
               <!-- row to hold logo and text box closee-->
               </div>
 
+              <!-- Form for if card is swiped on this page -->
               <form action="index.php?page=reason" method="post">
                 <div class="form-group">
                   <label for="student_ID"></label>
