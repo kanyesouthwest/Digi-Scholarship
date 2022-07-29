@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>buttons</title>
   </head>
-  <body style="background-color: rgb(0,65,122);">
+  <body>
 
 
     <?php
