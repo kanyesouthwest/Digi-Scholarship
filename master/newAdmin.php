@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> new admen page </title>
 </head>
 <body>
-
-
 
     <!-- navbar -->
     <nav class="navbar navbar-light sticky-top  border-bottom border-3" style="background-color: rgb(0, 49, 85);" >
         
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php?page=newAdmin">
                 <img src="photo/StACLogoWhite.png" alt="StACLogo" style="height: 40px; width: 60px;">
             </a>
 
@@ -25,40 +19,46 @@
 
             </div>
 
-            <!-- shurch bar -->
+            <!-- search bar -->
             <div class="col d-flex align-items-cente justify-content-center ">
-                
-                <input type="text" placeholder="name">
-            
-            <!-- close shuch bar -->    
+
+                <!-- Search students form  -->
+                <form action="index.php?page=search" method="post">
+                    <input name="search" type="text" placeholder="Student Search">
+                </form>
+            <!-- close search bar -->    
             </div>
 
             
             <div class="col d-flex align-items-cente justify-content-end ">
-                <a class="btn btn-primary roundedconners" href="login.php" role="button">log out</a>
+                <a class="btn btn-primary roundedconners" href="login.php" role="button">Log out</a>
             </div>
         </div>
 
     <!-- close navbar -->
     </nav>
 
+    <?php
+        $student_sql = "SELECT * FROM student_log";
+        $student_qry = mysqli_query($dbconnect, $student_sql);
+        $student_aa = mysqli_fetch_assoc($student_qry);
+    ?>
+
+
+
     <!-- container -->
     <div class="contaner-fluid">
         
-
-         
-
         <!-- holds the col table -->
         <div class="row m-1">
 
             <!-- the table col -->
             <div class="table-responsive">
             
-                <table class="table table-light table-sm">
+                <table class="table table-light table-sm table-hover">
                     <thead>
                         <tr>
-                        <th scope="col"></th>
-                        <th scope="col">FirstFirst name</th>
+                        <th scope="col">First name</th>
                         <th scope="col">Last name</th>
                         <th scope="col">Reason</th>
                         <th scope="col">Time out</th>
@@ -67,431 +67,22 @@
                     </thead>
 
                     <tbody>
+                        <?php
+                            do {
+                        ?>
                         <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">4</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">5</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">6</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">7</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">8</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">9</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <th scope="row">10</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr><tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>luch</td>
-                        <td>12:40</td>
-                        <td>1:20</td>
+                            <td><?php echo $student_aa["first_name"]; ?></td>
+                            <td><?php echo $student_aa["last_name"]; ?></td>
+                            <td><?php echo $student_aa["reason"]; ?></td>
+                            <td><?php echo $student_aa["time_out"]; ?></td>
+                            <td><?php echo $student_aa["time_in"]; ?></td>
                         </tr>
 
-                        
+                        <?php
+                        } while ($student_aa = mysqli_fetch_assoc($student_qry));
+                        ?>
                     </tbody>
-
                 </table>
-
             <!-- close table col div -->
             </div>
 
