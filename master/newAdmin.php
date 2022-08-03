@@ -23,7 +23,7 @@
             <div class="col d-flex align-items-cente justify-content-center ">
 
                 <!-- Search students form  -->
-                <form action="index.php?page=search" method="post">
+                <form autocomplete="off" action="index.php?page=search" method="post">
                     <input name="search" type="text" placeholder="Student Search">
                 </form>
             <!-- close search bar -->    

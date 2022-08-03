@@ -1,17 +1,29 @@
 
-/* adds the coustom font */
+/* custom din font */
 @font-face {
   src: url(fonts/din/DinPro-Regular.otf);
   font-family: din;
 }
 
-/* adds bold */
+/* custom bold din font */
 @font-face {
   src: url(fonts/din/DinPro-Bold.otf);
   font-weight: bold;
-  font-family: din;
+  font-family: dinbold;
 
 }
+
+/* 
+  din: Default font 
+  dinbold: Bolded font
+*/
+
+/* Changes the font on whole website */
+* {
+  font-family: din;
+}
+
+
 
 /* google fonts locally */
 @font-face {
@@ -51,16 +63,12 @@
   font-feature-settings: 'liga';
 }
 
-/* changes the name of the custom font */
-* {
-  font-family: din;
-}
 
 /* forces the hight to max and makes background the right color */
 body {
 
   height: 100vh;
-  background-image: url('photo/bettercall.jpeg');
+  background-image: url('photo/background.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
