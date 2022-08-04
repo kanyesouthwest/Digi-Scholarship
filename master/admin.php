@@ -170,8 +170,6 @@
                                         echo "<td> $group_students_aa[last_name] </td>";
                                         array_push($list, $group_students_aa['student_ID']);
                                     
-                                    
-
                                     ?>
                                 </tr>
                                 
