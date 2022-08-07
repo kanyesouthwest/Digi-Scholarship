@@ -13,7 +13,7 @@
 
       <!-- text box for swipe card -->
       <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
-        <p class="text-light display-1">You have signed in</p>
+        <p class="text-light display-1">You have signed <b>in</b></p> 
         <p>You will be redirected in 2 secods</p>
       </div>
 

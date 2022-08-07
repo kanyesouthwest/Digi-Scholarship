@@ -26,7 +26,7 @@
 
         <!-- text box for swipe card -->
         <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5" style="height: 200px; width: 600px;">
-          <p class="text-light display-2"><b>SWIPE</b> CARD</p>
+          <p class="text-light display-2"> <b>SWIPE</b> CARD</p>
         </div>
 
       <!-- row to hold logo and text box closee-->

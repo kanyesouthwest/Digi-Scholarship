@@ -13,14 +13,16 @@
 
 }
 
-/* 
-  din: Default font 
-  dinbold: Bolded font
-*/
 
 /* Changes the font on whole website */
 * {
   font-family: din;
+}
+
+.b {
+
+  font-family: dinbold;
+
 }
 
 
@@ -68,7 +70,7 @@
 body {
 
   height: 100vh;
-  background-image: url('photo/background.jpg');
+  background-image: url('photo/bettercall.jpeg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -79,6 +81,7 @@ body {
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+
 }
 
 
@@ -92,21 +95,6 @@ body {
   border: 0px;
   overflow:auto;
 
-
-}
-
-
-/* css for the resons cards when checked */
-.btn-check.radio:checked {
-
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 49, 85);
-
-}
-
-
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 49, 85);
 
 }
 
