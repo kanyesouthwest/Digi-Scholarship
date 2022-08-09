@@ -12,7 +12,7 @@
 
     // Check if submit form without entering ID
     if(empty($_POST['student_ID'])) {
-      header("Location:index.php?page=home");
+      header("Location:index.php?page=scan");
     } else {
 
       // Declare variable using ID from form
@@ -62,7 +62,7 @@
         $sign_in_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, time_in) VALUES ('$non_unique_group_ID','$student_ID', (NOW()))";
         $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
 
-        header("Location:index.php?page=sign_in");
+        header("Location:index.php?page=signed_in");
       } else {
     ?>
 
@@ -70,7 +70,7 @@
     <div class="container-fluid d-flex align-items-cente justify-content-center vstack" style="text: rgb(0, 49, 85);">
 
       <!-- the begining of the form -->
-      <form class="" action="index.php?page=complete"  method="post">
+      <form class="" action="index.php?page=signed_out"  method="post">
 
         <!-- row to hold form  -->
         <div class="row p-5 hm-5 d-flex align-items-cente justify-content-center">
@@ -288,7 +288,7 @@
             <!-- bake button -->
             <div class="col-12 d-flex align-items-cente justify-content-center">
                 <!-- link with a button inside it -->
-                <a href="index.php?page=home"> <button type="button" class=" text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold"  name="back button" style="height: 150px; width: 150px;">back</button> </a>
+                <a href="index.php?page=scan"> <button type="button" class=" text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold"  name="back button" style="height: 150px; width: 150px;">back</button> </a>
 
             </div>
 

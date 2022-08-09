@@ -11,7 +11,7 @@
   <!-- link to google icons -->
   <link rel="stylesheet" href="Bootstrap/icon.css">
   <!-- Link to manifest -->
-  <link rel="manifest" href="manifest.json"/>
+  <link rel="manifest" href="app/manifest.json"/>
 
 
 </head>
@@ -26,11 +26,11 @@
       $page = $_GET['page'];
       include("$page.php");
     } else {
-      include("home.php");
+      include("scan.php");
     }
     ?>
     <!-- Link to Javascript for Bootstrap -->
     <script src="bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="app/app.js"></script>
   </body>
 </html>

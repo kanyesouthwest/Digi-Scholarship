@@ -34,7 +34,7 @@
   </div>
 
   <?php
-    header('Refresh:2 ; URL=index.php?page=home');
+    header('Refresh:2 ; URL=index.php?page=scan');
   ?>
 
 </body>

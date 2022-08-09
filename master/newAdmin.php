@@ -50,7 +50,7 @@
                         } while ($student_aa = mysqli_fetch_assoc($student_qry));
                         ?>
                     </tbody>
-                </table>
+                </table> 
             <!-- close table col div -->
             </div>
 
@@ -58,5 +58,8 @@
         </div>
     <!-- contaier close -->
     </div>
+
+    
 </body>
 </html>
+

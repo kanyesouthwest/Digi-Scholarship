@@ -9,7 +9,7 @@
     session_start();
 
       if(!isset($_POST['reason'])) {
-          header("Location: home.php");
+          header("Location: index.php?page=scan");
 
       } else {
         $student_ID = $_SESSION["student_ID"];
@@ -104,7 +104,7 @@
             </div>
 
             <?php
-            header('Refresh:3 ; URL=index.php?page=home');
+            header('Refresh:3 ; URL=index.php?page=scan');
             }
         }
     ?>
