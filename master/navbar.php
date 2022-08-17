@@ -61,7 +61,8 @@ session_start()
         });
     });
 
-    function selectCountry(val) {
+    function selectCountry(val, ID) {
+        
     $("#search-box").val(val);
     $("#suggesstion-box").hide();
     }

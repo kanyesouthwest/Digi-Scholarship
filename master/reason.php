@@ -109,7 +109,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="Sport" id="card2" disabled required>
+                <input class="btn-check form-check" type="radio" name="reason" value="Sport" id="card2" required>
                 <label class="btn card btn-outline-info" for="card2" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->
@@ -206,7 +206,7 @@
 
                 <!-- input with the label -->
 
-                <input class="btn-check" type="radio"  name="reason" value="Lunch" id="card6" required oninvalid="  this.setCustomValidity('Please select a reason'), " oninput="setCustomValidity('')">
+                <input class="btn-check" type="radio"  name="reason" value="Lunch" id="card6" required >
                 <label class="btn card btn-outline-info"  for="card6" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 

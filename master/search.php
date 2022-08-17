@@ -13,6 +13,7 @@
             // Include navbar page
             include("navbar.php");
 
+
             // If session is empty then redirect
             if(empty($_SESSION['student_ID'])) {
                 header("Location:index.php?page=newadmin");
@@ -21,6 +22,7 @@
             // Grab ID and assign it to variable
             $student_ID = $_SESSION["student_ID"];
 
+
             // Query for student 
             $result_sql = "SELECT group_ID AS gID, student_ID, first_name, last_name, reason, time_out, 
             (SELECT time_in FROM student_transactions WHERE group_ID=gID AND time_in != '') 
@@ -28,8 +30,10 @@
             $result_qry = mysqli_query($dbconnect, $result_sql);
             $result_aa = mysqli_fetch_assoc($result_qry);
 
+
             // Unset session when query complete
             unset($_SESSION['student_ID']);
+
 
             // If no student is found on search
             if (mysqli_num_rows($result_qry) == 0 ) {
