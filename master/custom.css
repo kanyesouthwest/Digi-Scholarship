@@ -95,8 +95,46 @@ body {
   border: 0px;
   overflow:auto;
 
+}
+
+/* card when hover */
+.card:hover {
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 49, 85);
+  border-radius: .9rem .9rem .0rem .9rem;
+  margin: 20px;
+  border: 0px;
+  overflow:auto;
 
 }
+
+
+/* stiliying for auto complet */
+#suggesstion-box{
+  width: 200px;
+  position: absolute;
+}
+
+/* stiliying for the segesed boxes */
+#suggesstion-box li{
+  list-style: none;
+  margin-left: -32px;
+  padding: 10px; 
+  width: 200px;
+  background: rgb(0, 49, 85);
+  border: #ffffff 1px solid;
+  color: white;
+}
+
+/* stiliying for the segesed boxes when hovered*/
+#suggesstion-box li:hover{
+  background:white;
+  color: rgb(0, 49, 85);
+  cursor: pointer;
+}
+
+
 
 
 /* css for the resons cards when checked */

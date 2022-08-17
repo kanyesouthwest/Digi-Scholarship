@@ -130,7 +130,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check " type="radio" name="reason" value="Sick" id="card3" disabled required>
+                <input class="btn-check " type="radio" name="reason" value="Sick" id="card3" required>
                 <label class="btn card btn-outline-info ratio" for="card3" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
@@ -160,7 +160,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="Doctor" id="card4" disabled required>
+                <input class="btn-check form-check" type="radio" name="reason" value="Doctor" id="card4" required>
                 <label class="btn card d-flex btn-outline-info" for="card4" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
@@ -181,7 +181,7 @@
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="School Trip" id="card5"  required>
+                <input class="btn-check form-check" type="radio" name="reason" value="School Trip" id="card5" required>
                 <label class="btn card btn-outline-info" for="card5" style="height: 300px; width: 300px;" >
 
                       <!-- icon -->

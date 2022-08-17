@@ -22,14 +22,14 @@ session_start()
 
                 <!-- Search students form  -->
                 <form autocomplete="off" action="index.php?page=search" method="post">
-                    <div class="frmSearch">
-                        <input name="search" type="text" id="search-box" placeholder="Student Search" />
-                        <div id="suggesstion-box"></div>
+                    <div class="frmSearch" >
+                        <input name="search" type="text" id="search-box" placeholder="Student Search" style="width: 200px;"/>
+                        <div class="" id="suggesstion-box"></div>
                     </div>    
                 </form>
             <!-- close search bar -->    
             </div>
-
+           
             <div class="col d-flex align-items-cente justify-content-end ">
                 <a class="btn btn-primary roundedconners" href="login.php" role="button">Log out</a>
             </div>
@@ -37,7 +37,7 @@ session_start()
 
     <!-- close navbar -->
     </nav>
-
+    
     <script src="Bootstrap/jquery-2.1.1.min.js" type="text/javascript"></script>
 
 <!-- Autocomplete script -->
@@ -83,3 +83,4 @@ body{width:610px;}
 #search-box{padding: 10px;border: #a8d4b1 1px solid;border-radius:4px;}
 
 -->
+

@@ -21,16 +21,16 @@
         <div class="row m-1">
 
             <!-- the table col -->
-            <div class="table-responsive">
+            <div class="table-responsive" >
             
-                <table class="table table-light table-sm table-hover">
+                <table class="table table-light table-sm">
                     <thead>
                         <tr>
-                        <th scope="col">First name</th>
-                        <th scope="col">Last name</th>
-                        <th scope="col">Reason</th>
-                        <th scope="col">Time out</th>
-                        <th scope="col">Time in</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Reason</th>
+                            <th scope="col">Time out</th>
+                            <th scope="col">Time in</th>
                         </tr>
                     </thead>
 
@@ -49,6 +49,7 @@
                         <?php
                         } while ($student_aa = mysqli_fetch_assoc($student_qry));
                         ?>
+                        
                     </tbody>
                 </table> 
             <!-- close table col div -->
