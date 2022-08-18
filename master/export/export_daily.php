@@ -1,7 +1,7 @@
 <?php 
 
 // Load the database configuration file 
-include ("dbconnect.php");
+$dbconnect = mysqli_connect("localhost", "root", "", "sign_out_system_db");
 
 // Fetch records from database 
 $export_query = $dbconnect->query("SELECT * FROM student_log WHERE DATE(time_out)=current_date ORDER BY time_out ASC"); 

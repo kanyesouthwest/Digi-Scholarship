@@ -7,13 +7,13 @@ session_start()
         
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="index.php?page=newAdmin">
+            <a class="navbar-brand" href="index.php?page=admin">
                 <img src="photo/StACLogoWhite.png" alt="StACLogo" style="height: 40px; width: 60px;">
             </a>
 
             <div class="col d-lg-block d-none d-flex align-items-cente justify-content-center">
 
-                <a class="btn btn-primary roundedconners" href="export_daily.php" role="button">Export</a>
+                <a class="btn btn-primary roundedconners" href="export/export_old.php" role="button">Export</a>
 
             </div>
 
@@ -23,15 +23,15 @@ session_start()
                 <!-- Search students form  -->
                 <form autocomplete="off" action="index.php?page=search" method="post">
                     <div class="frmSearch" >
-                        <input name="search" type="text" id="search-box" placeholder="Student Search" style="width: 200px;"/>
+                        <input name="search" type="text" id="search-box" placeholder="Student Search" style="width: 200px"/>
                         <div class="" id="suggesstion-box"></div>
                     </div>    
                 </form>
             <!-- close search bar -->    
             </div>
-           
+
             <div class="col d-flex align-items-cente justify-content-end ">
-                <a class="btn btn-primary roundedconners" href="login.php" role="button">Log out</a>
+                <a class="btn btn-primary roundedconners" href="index.php?page=logout" role="button">Log out</a>
             </div>
         </div>
 

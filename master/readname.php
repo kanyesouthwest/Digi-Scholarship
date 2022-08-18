@@ -18,7 +18,7 @@ if(!empty($result)) {
     foreach($result as $name) {
 ?>
 
-<li onClick="selectCountry('<?php echo $name["first_name"]; echo " "; echo $name["last_name"]; $_SESSION['student_ID'] = $name["student_ID"]; ?>'); "> 
+<li onClick="searchstudent('<?php echo $name["first_name"]; echo " "; echo $name["last_name"];  ?>', '<?php echo $name['student_ID']; ?>')"> 
                             <?php echo $name["first_name"]; echo " "; echo $name["last_name"];  ?></li>
 </li>
 <?php 

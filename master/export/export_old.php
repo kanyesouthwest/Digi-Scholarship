@@ -1,7 +1,8 @@
 <?php 
 
 // Load the database configuration file 
-include ("dbconnect.php");
+$dbconnect = mysqli_connect("localhost", "root", "", "sign_out_system_db");
+
 
 // Fetch records from database 
 $export_query = $dbconnect->query("SELECT group_ID AS gID, student_ID, first_name, last_name, reason, time_out, 
