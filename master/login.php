@@ -20,11 +20,11 @@
 <form action="index.php?page=verify" method="post">
     <div class="form-group">
         <label for="username">Username</label>
-        <input name="username" type="text" class="form-control" placeholder="Enter username">
+        <input name="username" type="text" class="form-control" placeholder="Enter username" autocomplete="off">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input name="password" type="password" class="form-control" placeholder="Password">
+        <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

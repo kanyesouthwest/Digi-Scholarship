@@ -5,14 +5,17 @@
 <body>
 
     <?php 
+
+        // Including navbar page
         include("navbar.php");
 
+        // CHeck if admin is set in session
         if(!isset($_SESSION['admin'])) {
             // Not logged in, redirect back to index page
             header("Location: index.php?page=login");
-        }
+        } else {
 
-
+        // Select all from student log table
         $student_sql = "SELECT * FROM student_log";
         $student_qry = mysqli_query($dbconnect, $student_sql);
         $student_aa = mysqli_fetch_assoc($student_qry);
@@ -23,7 +26,8 @@
         } else {
     ?>
 
-<script type="text/javascript">
+<!-- Responsive search -->
+<script>
     function searchstudent(name, studentID) {
 
         var xmlhttp = new XMLHttpRequest();
@@ -34,6 +38,9 @@
     };
     xmlhttp.open("GET","studentrecords.php?studentID="+studentID,true);
     xmlhttp.send();
+
+    $("#search-box").val(name);
+    $("#suggesstion-box").hide();
     }
     
 </script>
@@ -60,6 +67,7 @@
 
                     <tbody>
                         <?php
+                            // Create new table row for every result in query
                             do {
                         ?>
                         <tr>
@@ -83,7 +91,8 @@
         </div>
     <!-- contaier close -->
     </div>
-<?php } ?>
+<?php }
+} ?>
     
 </body>
 </html>

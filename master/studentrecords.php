@@ -18,10 +18,10 @@
     } else {
 ?>
 
-<!-- holds the col table -->
+<!-- Hold col table -->
 <div class="row m-1">
 
-    <!-- Table for students -->
+    <!-- Students table -->
     <div class="table-responsive">
 
         <table class="table table-light table-sm">
@@ -57,9 +57,9 @@
 
         </table>
                         
-    <!-- coses the table div -->
+    <!-- Close table div -->
     </div>
-<!-- closes the table holding row -->
+<!-- Close table holding row -->
 </div>
 
 

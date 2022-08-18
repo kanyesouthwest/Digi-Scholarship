@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="Bootstrap/icon.css">
   <!-- Link to manifest -->
   <link rel="manifest" href="app/manifest.json"/>
-  
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <!-- Link to jquery  -->
+  <script src="Bootstrap/jquery-2.1.1.min.js" type="text/javascript"></script>
 
 
 </head>
