@@ -17,17 +17,29 @@
 
 ?>
 
-<form action="index.php?page=verify" method="post">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input name="username" type="text" class="form-control" placeholder="Enter username" autocomplete="off">
+<!-- contaner -->
+<div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
+      <!-- row to hold sing in form -->
+      <div class="row g-5 d-flex align-items-center justify-content-center">
+        
+        <form action="index.php?page=verify" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input name="username" type="text" class="form-control" placeholder="Enter username" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+      <!-- row to hold sing in form-->
+      </div>
+    <!-- contaner close-->
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+
 
 <?php 
     if(isset($_GET['error'])) { ?>

@@ -26,24 +26,24 @@
         } else {
     ?>
 
-<!-- Responsive search -->
-<script>
-    function searchstudent(name, studentID) {
+    <!-- Responsive search -->
+    <script>
+        function searchstudent(name, studentID) {
 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("selectedstudents").innerHTML = this.responseText;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("selectedstudents").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","studentrecords.php?studentID="+studentID,true);
+        xmlhttp.send();
+
+        $("#search-box").val(name);
+        $("#suggesstion-box").hide();
         }
-    };
-    xmlhttp.open("GET","studentrecords.php?studentID="+studentID,true);
-    xmlhttp.send();
-
-    $("#search-box").val(name);
-    $("#suggesstion-box").hide();
-    }
-    
-</script>
+        
+    </script>
 
     <!-- container -->
     <div class="contaner-fluid" id="selectedstudents">
@@ -91,8 +91,9 @@
         </div>
     <!-- contaier close -->
     </div>
-<?php }
-} ?>
+    
+    <?php }
+    } ?>
     
 </body>
 </html>

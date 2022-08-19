@@ -206,7 +206,7 @@
 
                 <!-- input with the label -->
 
-                <input class="btn-check" type="radio"  name="reason" value="Lunch" id="card6" required >
+                <input class="btn-check" type="radio"  name="reason" value="Lunch" id="card6" required oninvalid=" this.setCustomValidity('Please select a reason'), " oninput="setCustomValidity('')">
                 <label class="btn card btn-outline-info"  for="card6" style="height: 300px; width: 300px;" >
                   <div class="row-4">
 
