@@ -61,10 +61,6 @@
     </div>
 <!-- Close table holding row -->
 </div>
-
-
-
-
 <?php
 }
 ?>

@@ -21,7 +21,7 @@ session_start()
             <div class="col d-flex align-items-cente justify-content-center ">
 
                 <!-- Search students form  -->
-                <form autocomplete="off" action="index.php?page=search" method="post">
+                <form autocomplete="off" method="post">
                     <div class="frmSearch" >
                         <input name="search" type="text" id="search-box" onfocus="this.value=''" placeholder="Student Search" style="width: 200px"/>
                         <div class="" id="suggesstion-box"></div>
