@@ -20,7 +20,7 @@
 <!-- contaner -->
 <div class="container-fluid  d-flex align-items-center justify-content-center vstack text-light">
       <!-- row to hold sing in form -->
-      <div class="row g-5 d-flex align-items-center justify-content-center">
+      <div class="row g-5 d-flex align-items-center justify-content-center roundedconners border border-5">
         
         <form action="index.php?page=verify" method="post">
             <div class="form-group">
@@ -31,7 +31,9 @@
                 <label for="password">Password</label>
                 <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col p-3 d-flex align-items-center justify-content-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
         
       <!-- row to hold sing in form-->
