@@ -89,24 +89,24 @@
         <div class="row d-flex align-items-cente justify-content-center ">
 
 
-          <!-- card1 custom as well -->
+          <!-- card1 -->
           <div class="col-auto">
 
                 <!-- input with the label -->
-                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1" disabled required>
+                <input class="btn-check form-check" type="radio" name="reason" value="custom" id="card1" required>
                 <label class="btn card d-flex btn-outline-info" for="card1" style="height: 300px; width: 300px;" >
 
                     <!-- icon -->
                     <div class="col-12" >
-                      <i class="material-icons md-large ">edit</i>
+                      <i class="material-icons md-large ">directions_car</i>
                     </div>
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 250%;">CUSTOM</span>
+                      <span style="font-size: 250%;">driving test</span>
                     </div>
                 </label>
-
+          <!-- close card1 -->
           </div>
 
 
@@ -278,9 +278,11 @@
 
               <!-- last_name -->
               <div class="col-12 d-flex align-items-cente justify-content-center display-6">
-              <?php
-                  echo $student_aa['last_name'];
-              ?>
+              <b>
+                <?php
+                    echo $student_aa['last_name'];
+                ?>
+                </b>
               </div>
             <!-- close names -->
             </div>
