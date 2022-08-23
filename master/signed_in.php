@@ -1,3 +1,9 @@
+<head>
+  <?php 
+    session_start()
+  ?>
+</head>
+
 <body>
 
 
@@ -11,11 +17,20 @@
         <img src="photo/StACLogoWhite.png" class="" alt="StACLogo" style="height: 200px; width: 300px;">
       </div>
 
+      <?php 
+        // Get variable from session 
+        $student_name = $_SESSION["student_name"];
+      ?>
+
       <!-- text box for swipe card -->
       <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
-        <p class="text-light display-1">You have signed <b>in</b></p> 
+        <p class="text-light display-1"><?php echo $student_name ?> has signed <b>in</b></p> 
         <p>You will be redirected in 2 secods</p>
       </div>
+      <?php
+        // unset session when finished  
+        unset($_SESSION['student_name']);
+      ?>
 
     <!-- row to hold logo and text box closee-->
     </div>
@@ -27,6 +42,7 @@
         <input name="student_ID" type="number" autofocus="on" autocomplete="off" class="form-control border border-0 bg-success " onblur="this.focus()" style=" color: rgba(0,0,0,0); --bs-bg-opacity: .0;">
       </div>
     </form>
+
 
 
 
