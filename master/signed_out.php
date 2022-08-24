@@ -87,7 +87,7 @@
                 <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
                   <p class="text-light display-1">
                   <?php echo $first_name; ?> has signed <b>out</b></p>
-                  <p>you will be redirected in 2 seconds</p>
+                  <p>You will be redirected in 2 seconds</p>
                 </div>
 
               <!-- row to hold logo and text box closee-->

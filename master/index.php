@@ -34,5 +34,11 @@
     <!-- Link to Javascript for Bootstrap -->
     <script src="bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="app/app.js"></script>
+    <script>
+      document.addEventListener("contextmenu", function(event){
+      event.preventDefault();
+      alert('Right Click is Disabled');    
+      }, false);
+    </script>
   </body>
 </html>
