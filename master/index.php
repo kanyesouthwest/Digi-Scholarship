@@ -36,8 +36,7 @@
     <script src="app/app.js"></script>
     <script>
       document.addEventListener("contextmenu", function(event){
-      event.preventDefault();
-      alert('Right Click is Disabled');    
+      event.preventDefault(); 
       }, false);
     </script>
   </body>
