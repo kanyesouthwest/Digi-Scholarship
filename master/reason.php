@@ -62,11 +62,6 @@
         $sign_in_transaction_sql = "INSERT INTO student_transactions (group_ID, student_ID, time_in) VALUES ('$non_unique_group_ID','$student_ID', (NOW()))";
         $sign_in_transaction_qry = mysqli_query($dbconnect, $sign_in_transaction_sql);
 
-        // Set name in session for signed in page 
-        $student_name = $student_aa['first_name'];
-        $_SESSION["student_name"] = $student_name;
-
-        // Redirect user to signed_in page 
         header("Location:index.php?page=signed_in");
       } else {
     ?>
@@ -278,10 +273,10 @@
 
               <!-- last_name -->
               <div class="col-12 d-flex align-items-cente justify-content-center display-6">
-              <b>
-                <?php
-                    echo $student_aa['last_name'];
-                ?>
+                <b>
+                  <?php
+                      echo $student_aa['last_name'];
+                  ?>
                 </b>
               </div>
             <!-- close names -->
