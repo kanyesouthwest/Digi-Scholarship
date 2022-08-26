@@ -103,7 +103,7 @@
 
                     <!-- text -->
                     <div class="col-12">
-                      <span style="font-size: 250%;">driving test</span>
+                      <span style="font-size: 250%;">DRIVING TEST</span>
                     </div>
                 </label>
           <!-- close card1 -->
@@ -289,13 +289,13 @@
 
             <!-- submit button -->
             <div class="col-12 d-flex align-items-cente justify-content-center">
-              <button type="button " class="rounded-circle bg-success border border-0 text-light fs-2 text-uppercase fw-bold" name="button" style="height: 200px; width: 200px;">Submit</button>
+              <button type="button " class="rounded-circle bg-success border border-0 text-light fs-2 text-uppercase fw-bold" name="button" style="height: 200px; width: 200px;"><b>Submit</b></button>
             </div>
 
             <!-- bake button -->
             <div class="col-12 d-flex align-items-cente justify-content-center">
                 <!-- link with a button inside it -->
-                <a href="index.php?page=scan"> <button type="button" class=" text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold"  name="back button" style="height: 150px; width: 150px;">back</button> </a>
+                <a href="index.php?page=scan"> <button type="button" class=" text-decoration-none rounded-circle bg-danger border border-0 text-light fs-2 text-uppercase fw-bold"  name="back button" style="height: 150px; width: 150px;">Back</button> </a>
 
             </div>
 

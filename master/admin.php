@@ -42,7 +42,7 @@
         $("#search-box").val(name);
         $("#suggesstion-box").hide();
         }
-        
+
     </script>
 
     <!-- container -->

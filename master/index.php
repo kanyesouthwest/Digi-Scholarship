@@ -14,6 +14,9 @@
   <link rel="manifest" href="app/manifest.json"/>
   <!-- Link to jquery  -->
   <script src="Bootstrap/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <!-- Link to bootstrap javascript -->
+  <script src="Bootstrap/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
 
 </head>
