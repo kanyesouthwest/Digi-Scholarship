@@ -128,7 +128,7 @@
                       </div>
 
                 </label>
-
+          <!-- close card2›d -->
           </div>
 
           <!-- card3 -->

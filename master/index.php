@@ -43,4 +43,5 @@
       }, false);
     </script>
   </body>
+  <!-- made by ashton and digs XD -->
 </html>

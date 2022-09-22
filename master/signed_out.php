@@ -84,9 +84,11 @@
                 </div>
 
                 <!-- text box for swipe card -->
-                <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 vstack" style="height: 200px; width: 600px;">
-                  <p class="text-light display-1">
-                  <?php echo $first_name; ?> has signed <b>out</b></p>
+                <div class="col-12 d-flex align-items-center justify-content-center roundedconners border border-5 overflow-hidden vstack" style="height: 200px; width: 600px;">
+                  <p class="text-light display-1 ">
+                    <?php echo $first_name; ?>
+                  </p>
+                  <p>has signed <b>out</b></p>
                   <p>You will be redirected in 2 seconds</p>
                 </div>
 
